@@ -1,0 +1,434 @@
+print[[
+
+
+
+
+
+                              __
+                              XX
+_________        ______       ~~     _______         ______      ___.    ___.
+XXXXXXXXX.     ,gXXXXXX.      XX    ,XXXXXXXs      ,gXXXXXX.     XXXi    XXX
+XXXXXXXXXX.  ,dXXXXXXXXXs     XX   iXXXXXXXXXi    iXXXXXXXXXX_   XXXb    XXX
+XXX~~~XXXXX  XXXXX~ ~~XXXX.   XX  XXXX~   XXXX   iXXXX~`'~XXXXi  XXXXs   XXX
+XXX    dXXX  XXX       XXXX   XX  XXXXXs_  '~~   XXX`      XXXX  XXXXXb !XXX
+XXX___XXXXX iXXX!       XXX   XX   XXXXXXXXXs   iXXX        XXX  XXX XXi XXX
+XXXXXXXXXX`  XXX.       XXX   XX    ~XXXXXXXXX   XXX        XXX  XXX'XXX XXX
+XXXXXXXXX`   XXX       XXXX   XX  ____ '~XXXXXb  XXX       XXXX  XXX !XXbXXX
+XXX          XXXb     gXXX!   XX  XXXX      XXX  XXXb     gXXX   XXX  'XXXXX
+XXX          XXXXXXXXXXXXf    XX  ~XXXXX_gXXXX!  'XXXXXXXXXXXX`  XXX   !XXXX
+XXX           ~XXXXXXXXX`     XX    XXXXXXXXX~    'XXXXXXXXX`    XXX    XXXX
+~~~              ~~X~~`      '~~`     XXXXX~         ~~X~~`      ~~~    '~~~`
+                   ~                  ~~~~~            ~
+                             POISON Version: Beta 2.1        
+                              
+                              
+                              
+                              
+                              ]]
+--CmdBar
+
+-- For Below, change every parent to game.CoreGui
+game.Players.LocalPlayer.Chatted:connect(function(cmd) 
+    if cmd:match(_G.prefix.."cmds") then
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/quistone/Scripts/main/PoisonCommandsGui"), true))() 
+    end
+end)
+
+game.Players.LocalPlayer.Chatted:connect(function(cmd)
+    if cmd:match(_G.prefix.."changelog") then
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/quistone/Scripts/main/PoisonChangelog"), true))()
+    end
+end)
+
+--Prefix
+_G.prefix = "-"
+--Prefix Noti
+local notifsEnabled = true
+local player = game:GetService("Players").LocalPlayer
+
+local function notify(title,text,duritation)
+game:GetService("StarterGui"):SetCore("SendNotification",{
+    Title=title;
+    Text=text;
+    Duritation=duritation;
+})
+end
+
+if notifsEnabled then
+    notify("POISON",player.Name,5)
+    notify("Default Prefix",_G.prefix.."",5)
+end
+
+--Credit
+notify("Credit","austn#1400 | xml4#4444",5)
+
+--CMD START
+game.Players.LocalPlayer.Chatted:connect(function(cmd)
+local cmd = cmd:lower()
+if cmd:sub(1,7) == "prefix " then
+   _G.prefix = cmd:sub(8)
+end
+if cmd:match(_G.prefix.."suitcase") then
+    notify("Suitcase","Gave Suitcase GripPos",5)
+local Player = game:GetService("Players").LocalPlayer
+local Character = Player.Character or Player.CharacterAdded:Wait(.1)
+
+repeat wait()
+    Character:FindFirstChild("Animate"):FindFirstChild("toolnone"):FindFirstChild("ToolNoneAnim").AnimationId = "rbxassetid://2319711746"
+until Character:FindFirstChild("Animate"):FindFirstChild("toolnone"):FindFirstChild("ToolNoneAnim").AnimationId == "rbxassetid://2319711746"
+wait()
+local tool = game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool")
+    if tool then
+            tool.GripForward = Vector3.new(-0, -1, -0)
+            tool.GripPos = Vector3.new(0, 0.65, 0.01)
+            tool.GripRight = Vector3.new(0, -0, 1)
+            tool.GripUp = Vector3.new(1, -0, -0)
+end
+        wait()
+        for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        v.Parent = game.Players.LocalPlayer.Character
+        end
+end
+end)
+
+game.Players.LocalPlayer.Chatted:connect(function(cmd)
+if cmd:match(_G.prefix.."backpack") then
+notify("Backpack","Gave Backpack GripPos",5)
+local tool = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
+	if tool then
+			tool.GripForward = Vector3.new(0.935, 0.354, -0.03)
+				tool.GripPos = Vector3.new(-1.2, 1, 2.3)
+				tool.GripRight = Vector3.new(1, 200, log10)
+				tool.GripUp = Vector3.new(1, 2, 0)
+				end
+end
+end)
+game.Players.LocalPlayer.Chatted:connect(function(cmd)
+if cmd:match(_G.prefix.."demesh") then
+    notify("Demesh","Removed Tool Mesh",5)
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+        if v:IsA("Tool") then
+            for _,x in pairs(v:GetDescendants()) do
+                if x.Name == "Mesh" or x.Name == "SpecialMesh" then
+                    x:Destroy()
+                end
+            end
+        end
+    end
+end
+end)
+
+game.Players.LocalPlayer.Chatted:connect(function(cmd)
+if cmd:match(_G.prefix.."equipall") then
+    notify("Equip All","Equiped All Tools",5)
+for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+   v.Parent = game:GetService("Players").LocalPlayer.Character
+   
+end
+end
+end)
+
+--Local For rjdupe
+Wait_Time = 5
+
+game.Players.LocalPlayer.Chatted:connect(function(cmd)
+if cmd:match(_G.prefix.."rjdupe") then
+    
+notify("RJ Dupe","Please Wait 5 Seconds",10)
+notify("Important","This Command Only Does 5 At A Time, Will Update Out Of Beta",10)
+
+wait(Wait_Time)
+    loadstring(game:HttpGet(("https://raw.githubusercontent.com/repurges/RBX-Scripts/main/RejoinDupe"), true))()
+    
+end
+end)
+
+game.Players.LocalPlayer.Chatted:connect(function(cmd)
+if cmd:match(_G.prefix.."rejoin") then
+    notify("Rejoin","Rejoining",5)
+    wait(0.5)
+    local ts = game:GetService("TeleportService")
+local p = game:GetService("Players").LocalPlayer
+ 
+ts:Teleport(game.PlaceId, p)
+
+end
+end)
+
+game.Players.LocalPlayer.Chatted:connect(function(cmd)
+if cmd:match(_G.prefix.."serverhop") then
+    notify("Serverhop","Searching For Servers",10)
+    wait(0.5)
+    local x = {}
+    for _, v in ipairs(game:GetService("HttpService"):JSONDecode(game:HttpGetAsync("https://games.roblox.com/v1/games/" .. game.PlaceId .. "/servers/Public?sortOrder=Asc&limit=100")).data) do
+        if type(v) == "table" and v.maxPlayers > v.playing and v.id ~= game.JobId then
+            x[#x + 1] = v.id
+        end
+    end
+    if #x > 0 then
+        game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, x[math.random(1, #x)])
+    else
+        return notify("Serverhop","Couldn't find a server.",5)
+    end
+end
+end)
+
+game.Players.LocalPlayer.Chatted:connect(function(cmd)
+if cmd:match(_G.prefix.."radioanim") then
+
+notify("Radio Anim","Removed Radio Animation",5)
+
+ wait()
+                for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+     if v:IsA'Tool' then
+          v.Parent = game.Players.LocalPlayer.Backpack;
+wait()
+for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+        v.Parent = game.Players.LocalPlayer.Character
+        wait()
+        for i,v in pairs(game.Players.LocalPlayer.Character.Humanoid:GetPlayingAnimationTracks()) do
+        v:Stop()
+    end
+end
+end
+end
+end
+end)
+
+game.Players.LocalPlayer.Chatted:connect(function(msg)
+if msg:sub(1, 6) == _G.prefix.."goto " then
+    notify("Goto","Teleport Success",5)
+    local player
+    for i, plr in ipairs(game.Players:GetPlayers()) do
+    if string.lower(plr.Name):sub(1, string.len(msg:sub(7))) == string.lower(msg:sub(7)) then
+        player = plr.Name
+    end
+    end
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace[player].HumanoidRootPart.CFrame
+end
+end)
+
+local plr = game:GetService("Players").LocalPlayer
+local charr = game:GetService("Players").LocalPlayer.Character
+local players = game:GetService("Players"):GetPlayers()
+local gameid = game.PlaceId
+
+local function toversionid(id)
+    local content = game:HttpGet("http://www.roblox.com/studio/plugins/info?assetId="..id)
+    if string.find(content, 'value="') then 
+		local epic = string.find(content, 'value="')
+		local almost = string.sub(content, epic + 7, epic + 18)
+    	local filter1 = string.gsub(almost, " ", "")
+    	local filter2 = string.gsub(filter1, "$", "")
+    	local filter3 = string.gsub(filter2, "$", "")
+    	local filter4 = string.gsub(filter3, '"', "")
+    	local versionid = string.gsub(filter4, "$", "")
+		return versionid
+    end
+end
+local function percentencode(id)
+    local third = string.gsub(tostring(id), "3", "%%33")
+    local first = string.gsub(third, "1", "%%31")
+    local second = string.gsub(first, "2", "%%32")
+    local fourth = string.gsub(second, "4", "%%34")
+    local fifth = string.gsub(fourth, "5", "%%35")
+    local sixth = string.gsub(fifth, "6", "%%36")
+    local seventh = string.gsub(sixth, "7", "%%37")
+    local eighth = string.gsub(seventh, "8", "%%38")
+    local ninth = string.gsub(eighth, "9", "%%39")
+    local PercentEncodedId = ninth
+    return PercentEncodedId
+end
+local function convert(id)
+	local c = toversionid(id)
+	local e = percentencode(c)
+    local link = "\n\n\n\n\n\n\n\n\n\n\n\n\n_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN_POISON_ADMIN"
+    local poopsex = "&%E2%80%B0%61%73%73%65%74%6e%61%6d%65%E2%80%AD=%E2%80%8A%30%78%30%30%30%30%31%33%61%36%37%32%34%64%39%E2%80%8A&%E1%9F%9B%75%73%65%72%61%73%73%65%74%69%64%E2%80%AA=%E2%80%A8%30%78%30%30%30%30%30%30%31%33%30%33%31%63%65%36%32%E2%80%89&%E2%80%A9%61%73%73%65%74%76%65%72%73%69%6f%6e%69%64%E2%80%AD=%E2%80%8A%30%78%30%30%30%30%30%31%33%39%61%36%31%62%33%36%E2%80%89&%E2%80%A9%75%6e%69%76%65%72%73%65%69%64%E2%80%AB=%E2%80%89%30%78%30%30%30%30%30%30%31%33%64%65%64%32%64%34%61%E2%80%89&%E2%80%A9%75%73%65%72%61%73%73%65%74%69%64%E2%80%AE=%E2%80%89%30%78%30%30%30%30%30%31%34%35%33%30%62%64%34%30%E2%80%8A&%E2%80%AD%61%73%73%65%74%76%65%72%73%69%6F%6E%69%64%E2%80%AB=".. tostring(e)
+    local b = ""
+    for i = 1,#poopsex do
+        b = b .. poopsex:sub(i,i)
+    end
+    link = link .. b
+    return link
+end
+
+plr.Chatted:connect(function(message)
+    if message:sub(1,3) == _G.prefix.."id" then
+        notify("ID","Played Selected Audio",5)
+        id = message:sub(5)
+        local args = message:split(" ")
+        
+        for _,v in pairs(plr.Backpack:GetChildren()) do
+            if v:IsA("Tool") and string.lower(v.Name) == "boombox" then v.Parent = plr.Character end
+        end
+        
+        wait(.1)
+        
+        for _,v in pairs(plr.Character:GetChildren()) do
+            if v:IsA("Tool") and string.lower(v.Name) == "boombox" then v:FindFirstChildOfClass("RemoteEvent"):FireServer("PlaySong",convert(id)) end
+        end 
+    end
+    
+    if message:sub(1,3) == _G.prefix.."bp" then
+        notify("BP","BP Success",5)
+    id = message:sub(5)
+    
+            for _,v in pairs(plr.Backpack:GetChildren()) do
+        if v:IsA("Tool") and string.lower(v.Name) == "boombox" then v.Parent = plr.Character end
+    end
+    
+        for _,v in pairs(plr.Character:GetChildren()) do
+            if v:IsA("Tool") and string.lower(v.Name) == "boombox" then v:FindFirstChildOfClass("RemoteEvent"):FireServer("PlaySong",convert(id)) end
+        end 
+    
+    wait(.6)
+    
+    for _,v in pairs(plr.Character:GetChildren()) do
+        if v:IsA("Tool") and string.lower(v.Name) == "boombox" then plr.Character.Humanoid:UnequipTools() end
+    end
+    
+    wait(.6)
+    
+    for _,v in pairs(plr.Backpack:GetChildren()) do
+        if v:IsA("Tool") and string.lower(v.Name) == "boombox" then
+            v.Handle.Sound.TimePosition = 0
+            v.Handle.Sound.Playing = true
+        end
+    end
+    
+    end
+    
+        if message:sub(1,3) == _G.prefix.."tp" then 
+        local args = message:split(" ")
+        
+         for _,v in pairs(plr.Character:GetChildren()) do
+            if v:IsA("Tool") and string.lower(v.Name) == "boombox" then
+                v.Handle.Sound.TimePosition = args[2]
+            end
+         end
+         
+        for _,v in pairs(plr.Backpack:GetChildren()) do
+            if v:IsA("Tool") and string.lower(v.Name) == "boombox" then
+                v.Handle.Sound.TimePosition = args[2]
+            end
+        end
+         
+    end
+    
+    if message:sub(1,4) == _G.prefix.."tpa" then
+        notify("TPA","TPA Success",5)
+    local args = message:split(" ")
+    
+    for _,v in pairs(game.Players:GetPlayers()) do
+    
+        if v.Name ~= plr.Name then
+            for _,v2 in pairs(game.Workspace[v.Name]:GetChildren()) do
+                if v2:IsA("Tool") and string.lower(v2.Name) == "boombox" then 
+                    v2.Handle.Sound.TimePosition = args[2] end
+                end
+                for _,v2 in pairs(v.Backpack:GetChildren()) do
+                if v2:IsA("Tool") and string.lower(v2.Name) == "boombox" then 
+                    v2.Handle.Sound.TimePosition = args[2] end
+                end
+            end
+        end
+    end
+    
+    if message:sub(1,3) == _G.prefix.."reset" then
+        charr:BreakJoints()
+    end
+    
+    if message:sub(1,5) == _G.prefix.."mute" then
+        notify("Mute","Muted Player Successfuly",5)
+        while wait(.03) do
+            for _,v in pairs(game.Players:GetPlayers()) do
+                if v.Name ~= plr.Name then
+                -- Character
+                for _,v2 in pairs(game.Workspace[v.Name]:GetChildren()) do
+                    if v2:IsA("Tool") and string.lower(v2.Name) == "boombox" then v2.Handle.Sound.TimePosition = 0 end
+                end
+                
+                -- Backpack
+                for _,v2 in pairs(v.Backpack:GetChildren()) do
+                    if v2:IsA("Tool") and string.lower(v2.Name) == "boombox" then v2.Handle.Sound.TimePosition = 0 end
+                end
+                end
+            end
+        end
+    end
+    
+    if message:sub(1,7) == _G.prefix.."gtools" then
+        notify("GTools","Loop Grabbing All Tools",5)
+        getgenv().loopgtools = true;
+        
+        while wait() do
+        if getgenv().loopgtools == true then
+        for _,v in pairs(game.workspace:GetChildren()) do
+            if v:IsA("Tool") then
+                v.Handle.CFrame = plr.Character.Head.CFrame
+            end
+        end
+    end
+end
+end
+end)
+
+game.Players.LocalPlayer.Chatted:connect(function(cmd)
+if cmd:match(_G.prefix.."ungtools") then
+    notify("GTools","Stopped Loop Grabbing Tools",5)
+    getgenv().loopgtools = false;
+    
+end
+end)
+
+game.Players.LocalPlayer.Chatted:connect(function(cmd)
+if cmd:match(_G.prefix.."getpos") then
+
+playercframe = game:GetService("Players").LocalPlayer.Character.Torso.Position
+print[[
+
+            
+Poison Printed CFrame:
+     ]]
+
+print("X: "..playercframe.X)
+print("Y: "..playercframe.Y)
+print("Z: "..playercframe.Z)
+notify("Printed","Check Console",5)
+end
+end)
+
+game.Players.LocalPlayer.Chatted:connect(function(cmd)
+if cmd:match(_G.prefix.."gettoolname") then
+
+print[[
+
+
+Printed Tool Names, Just Use Dex Retard
+]]
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+print(v.Name)
+end
+notify("Printed","Check Console",5)
+end
+end)
+
+game.Players.LocalPlayer.Chatted:connect(function(cmd)
+if cmd:match(_G.prefix.."gun") then
+notify("Gun","Gave Gun GripPos",5)
+local v = -0.2
+local vm = -2.5
+for _,z in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+    if z:IsA'Tool' then do
+        v = v - 0.5
+        vm = vm * 0.5
+        z.Parent = game.Players.LocalPlayer.Character
+        z.Grip = CFrame.new(v,vm,0)
+        z.GripUp = Vector3.new(1,-1,0)
+        z.GripRight = Vector3.new(1,0,1)
+        z.GripForward = Vector3.new(0,0,0)
+    end
+    end
+end
+end
+end)
