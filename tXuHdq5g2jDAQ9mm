@@ -19,24 +19,18 @@ XXX          XXXXXXXXXXXXf    XX  ~XXXXX_gXXXX!  'XXXXXXXXXXXX`  XXX   !XXXX
 XXX           ~XXXXXXXXX`     XX    XXXXXXXXX~    'XXXXXXXXX`    XXX    XXXX
 ~~~              ~~X~~`      '~~`     XXXXX~         ~~X~~`      ~~~    '~~~`
                    ~                  ~~~~~            ~
-                             POISON Version: Beta 2.1        
+                             POISON Version: Beta 2.4        
                               
                               
                               
                               
                               ]]
 --CmdBar
-
--- For Below, change every parent to game.CoreGui
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/RA3t7Q9uAkYQVxgc/4tqv5gV972BwvZeT/main/PoisonCmdBar"), true))()
+--CmdsGui
 game.Players.LocalPlayer.Chatted:connect(function(cmd) 
     if cmd:match(_G.prefix.."cmds") then
-        loadstring(game:HttpGet(("https://raw.githubusercontent.com/quistone/Scripts/main/PoisonCommandsGui"), true))() 
-    end
-end)
-
-game.Players.LocalPlayer.Chatted:connect(function(cmd)
-    if cmd:match(_G.prefix.."changelog") then
-        loadstring(game:HttpGet(("https://raw.githubusercontent.com/quistone/Scripts/main/PoisonChangelog"), true))()
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/RA3t7Q9uAkYQVxgc/4tqv5gV972BwvZeT/main/PoisonCommandsGui"), true))()
     end
 end)
 
