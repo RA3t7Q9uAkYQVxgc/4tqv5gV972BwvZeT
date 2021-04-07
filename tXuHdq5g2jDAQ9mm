@@ -25,6 +25,28 @@ XXX           ~XXXXXXXXX`     XX    XXXXXXXXX~    'XXXXXXXXX`    XXX    XXXX
                               
                               
                               ]]
+bc = BrickColor.new("Light blue")
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
+	Text = "Welcome To Poison Admin, "..game.Players.LocalPlayer.Name.."!";
+	Font = Enum.Font.Cartoon;
+	Color = bc.Color;
+	FontSize = Enum.FontSize.Size96;	
+})
+bc = BrickColor.new("White")
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
+	Text = "To Use Chat Commands Use Prefix '-' ";
+	Font = Enum.Font.Cartoon;
+	Color = bc.Color;
+	FontSize = Enum.FontSize.Size96;	
+})
+bc = BrickColor.new("white")
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
+	Text = "Command-Bar Key ';' ";
+	Font = Enum.Font.Cartoon;
+	Color = bc.Color;
+	FontSize = Enum.FontSize.Size96;	
+})
+
 --CmdBar
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/RA3t7Q9uAkYQVxgc/4tqv5gV972BwvZeT/main/PoisonCmdBar"), true))()
 --CmdsGui
