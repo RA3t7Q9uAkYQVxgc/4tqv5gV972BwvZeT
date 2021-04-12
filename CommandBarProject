@@ -8,6 +8,7 @@ local UIGradient = Instance.new("UIGradient")
 PoisonBar.Name = "PoisonBar"
 PoisonBar.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 PoisonBar.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+PoisonBar.ResetOnSpawn = false
 CMDBar.Name = "CMDBar"
 CMDBar.Parent = PoisonBar
 CMDBar.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
@@ -36,142 +37,48 @@ UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.from
 UIGradient.Parent = Gradient
 
 
+-- Doomspire BrickBattle Commands 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
---Cmds | ADD CMDS BELOW
-
---1
+--1D
 Input.FocusLost:Connect(function()
 local arg = string.split(Input.Text)
-  if arg[1] == ";print" then
-    print("test")
+  if arg[1] == ";yellow" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(130.996, 45.2, 1.5e-05)
 end
 end)
 
---2
+--2D
 Input.FocusLost:Connect(function()
 local arg = string.split(Input.Text)
-  if arg[1] == ";test" then
-    print("test2")
+  if arg[1] == ";blue" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.344067,24.8,131.682)
 end
 end)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+--3D
+Input.FocusLost:Connect(function()
+local arg = string.split(Input.Text)
+  if arg[1] == ";red" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-130.75, 24.8,-0.00576636)
+end
+end)
+
+--4D
+Input.FocusLost:Connect(function()
+local arg = string.split(Input.Text)
+  if arg[1] == ";green" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0.356766, 24.8, -130.937)
+end
+end)
+
+--5D
+Input.FocusLost:Connect(function()
+local arg = string.split(Input.Text)
+  if arg[1] == ";re" then
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, -499, 0)
+end
+end)
+--END OF DOOMSPIRE BRICKBATTLE SHIT
 
 
 
