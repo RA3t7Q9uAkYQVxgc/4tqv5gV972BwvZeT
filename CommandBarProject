@@ -1,0 +1,225 @@
+
+local PoisonBar = Instance.new("ScreenGui")
+local CMDBar = Instance.new("Frame")
+local Input = Instance.new("TextBox")
+local Gradient = Instance.new("Frame")
+local UIGradient = Instance.new("UIGradient")
+
+PoisonBar.Name = "PoisonBar"
+PoisonBar.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+PoisonBar.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+CMDBar.Name = "CMDBar"
+CMDBar.Parent = PoisonBar
+CMDBar.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+CMDBar.BackgroundTransparency = 0.100
+CMDBar.BorderSizePixel = 0
+CMDBar.Position = UDim2.new(-0.300000012, 0, 0.888000011, 0)
+CMDBar.Size = UDim2.new(0, 225, 0, 29)
+Input.Name = "Input"
+Input.Parent = CMDBar
+Input.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Input.BackgroundTransparency = 1.000
+Input.Size = UDim2.new(0, 224, 0, 29)
+Input.Font = Enum.Font.Gotham
+Input.PlaceholderText = "Command"
+Input.Text = ""
+Input.TextColor3 = Color3.fromRGB(255, 255, 255)
+Input.TextSize = 15.000
+Gradient.Name = "Gradient"
+Gradient.Parent = CMDBar
+Gradient.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Gradient.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Gradient.BorderSizePixel = 0
+Gradient.Position = UDim2.new(0, 0, 1, 0)
+Gradient.Size = UDim2.new(0, 225, 0, 3)
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(57, 104, 252)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(51, 68, 175))}
+UIGradient.Parent = Gradient
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--Cmds | ADD CMDS BELOW
+
+--1
+Input.FocusLost:Connect(function()
+local arg = string.split(Input.Text)
+  if arg[1] == ";print" then
+    print("test")
+end
+end)
+
+--2
+Input.FocusLost:Connect(function()
+local arg = string.split(Input.Text)
+  if arg[1] == ";test" then
+    print("test2")
+end
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--IGnore
+--[[
+Dont Put
+Comannds
+Below This
+]]
+-- ALL TWEENS BELOW, IGNORE THESE PERMANTLY
+-- Tweens
+local function ULYZ_fake_script() -- PoisonBar.tweenbar 
+	local script = Instance.new('LocalScript', PoisonBar)
+
+
+	local Bar = script.Parent.CMDBar
+	local Open = false
+	local plr = game.Players.LocalPlayer
+
+	local PositionClosed = UDim2.new(-0.3, 0,0.888, 0)
+	local PositionOpen = UDim2.new(0.011, 0,0.888, 0)
+
+
+
+	plr:GetMouse().KeyDown:Connect(function(K)
+		if K == ';' then
+			Input:CaptureFocus()
+			Input.Text = ""
+			Bar:TweenPosition((PositionOpen),'Out','Linear',.25)
+		end
+	end)
+	Input.FocusLost:Connect(function(enterPressed)
+		if enterPressed then 
+			Bar:TweenPosition((PositionClosed),"Out","Linear",.25)
+		end
+	end)
+end
+coroutine.wrap(ULYZ_fake_script)()
+-- End Of Tweens
