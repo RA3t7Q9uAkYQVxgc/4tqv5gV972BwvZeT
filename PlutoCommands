@@ -1,0 +1,402 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Commands = Instance.new("ScreenGui")
+local CommandsFrame = Instance.new("Frame")
+local Headbar = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local playlist_add_check = Instance.new("ImageButton")
+local ExitButton = Instance.new("ImageButton")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local CMD1 = Instance.new("TextLabel")
+local CMD2 = Instance.new("TextLabel")
+local CMD3 = Instance.new("TextLabel")
+local CMD4 = Instance.new("TextLabel")
+local CMD5 = Instance.new("TextLabel")
+local CMD6 = Instance.new("TextLabel")
+local CMD7 = Instance.new("TextLabel")
+local CMD8 = Instance.new("TextLabel")
+local CMD9 = Instance.new("TextLabel")
+local CMD10 = Instance.new("TextLabel")
+local CMD11 = Instance.new("TextLabel")
+local CMD12 = Instance.new("TextLabel")
+local CMD13 = Instance.new("TextLabel")
+local CMD14 = Instance.new("TextLabel")
+local CMD15 = Instance.new("TextLabel")
+local CMD16 = Instance.new("TextLabel")
+local CMD17 = Instance.new("TextLabel")
+local CMD18 = Instance.new("TextLabel")
+local CMD19 = Instance.new("TextLabel")
+local CMD20 = Instance.new("TextLabel")
+local CMD21 = Instance.new("TextLabel")
+
+--Properties:
+
+Commands.Name = "Commands"
+Commands.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Commands.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+CommandsFrame.Name = "CommandsFrame"
+CommandsFrame.Parent = Commands
+CommandsFrame.AnchorPoint = Vector2.new(0.5, 1)
+CommandsFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+CommandsFrame.BackgroundTransparency = 0.100
+CommandsFrame.BorderSizePixel = 0
+CommandsFrame.Position = UDim2.new(0.5, 0, 0.593038797, 35)
+CommandsFrame.Size = UDim2.new(0, 169, 0, 209)
+
+Headbar.Name = "Headbar"
+Headbar.Parent = CommandsFrame
+Headbar.AnchorPoint = Vector2.new(0.5, 1)
+Headbar.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Headbar.BackgroundTransparency = 0.100
+Headbar.BorderSizePixel = 0
+Headbar.Position = UDim2.new(0.5, 0, -0.0578710735, 35)
+Headbar.Size = UDim2.new(0, 169, 0, 23)
+
+TextLabel.Parent = Headbar
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.195266277, 0, -0.00956937764, 0)
+TextLabel.Size = UDim2.new(0, 102, 0, 23)
+TextLabel.Font = Enum.Font.Gotham
+TextLabel.Text = "Commands"
+TextLabel.TextColor3 = Color3.fromRGB(230, 230, 230)
+TextLabel.TextSize = 14.000
+
+playlist_add_check.Name = "playlist_add_check"
+playlist_add_check.Parent = Headbar
+playlist_add_check.BackgroundTransparency = 1.000
+playlist_add_check.Position = UDim2.new(0.0236686394, 0, 0.0869565234, 0)
+playlist_add_check.Size = UDim2.new(0, 19, 0, 18)
+playlist_add_check.ZIndex = 2
+playlist_add_check.Image = "rbxassetid://3926307971"
+playlist_add_check.ImageColor3 = Color3.fromRGB(230, 230, 230)
+playlist_add_check.ImageRectOffset = Vector2.new(324, 284)
+playlist_add_check.ImageRectSize = Vector2.new(36, 36)
+
+ExitButton.Name = "ExitButton"
+ExitButton.Parent = CommandsFrame
+ExitButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ExitButton.BackgroundTransparency = 1.000
+ExitButton.Position = UDim2.new(0.893491149, 0, 0.0208030045, 0)
+ExitButton.Size = UDim2.new(0, 14, 0, 14)
+ExitButton.Image = "rbxassetid://3926305904"
+ExitButton.ImageColor3 = Color3.fromRGB(230, 230, 230)
+ExitButton.ImageRectOffset = Vector2.new(924, 724)
+ExitButton.ImageRectSize = Vector2.new(36, 36)
+
+ScrollingFrame.Parent = CommandsFrame
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.0207100585, 0, 0.105263159, 0)
+ScrollingFrame.Size = UDim2.new(0, 161, 0, 179)
+ScrollingFrame.ScrollBarThickness = 3
+
+CMD1.Name = "CMD1"
+CMD1.Parent = ScrollingFrame
+CMD1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CMD1.BackgroundTransparency = 1.000
+CMD1.BorderSizePixel = 0
+CMD1.Position = UDim2.new(0.1863354, 0, 0.0203682687, 0)
+CMD1.Size = UDim2.new(0, 102, 0, 20)
+CMD1.Font = Enum.Font.SourceSans
+CMD1.Text = "-"
+CMD1.TextColor3 = Color3.fromRGB(255, 255, 255)
+CMD1.TextSize = 13.000
+
+CMD2.Name = "CMD2"
+CMD2.Parent = ScrollingFrame
+CMD2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CMD2.BackgroundTransparency = 1.000
+CMD2.BorderSizePixel = 0
+CMD2.Position = UDim2.new(0.1863354, 0, 0.0682151616, 0)
+CMD2.Size = UDim2.new(0, 102, 0, 20)
+CMD2.Font = Enum.Font.SourceSans
+CMD2.Text = "-"
+CMD2.TextColor3 = Color3.fromRGB(255, 255, 255)
+CMD2.TextSize = 13.000
+
+CMD3.Name = "CMD3"
+CMD3.Parent = ScrollingFrame
+CMD3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CMD3.BackgroundTransparency = 1.000
+CMD3.BorderSizePixel = 0
+CMD3.Position = UDim2.new(0.1863354, 0, 0.116062053, 0)
+CMD3.Size = UDim2.new(0, 102, 0, 20)
+CMD3.Font = Enum.Font.SourceSans
+CMD3.Text = "-"
+CMD3.TextColor3 = Color3.fromRGB(255, 255, 255)
+CMD3.TextSize = 13.000
+
+CMD4.Name = "CMD4"
+CMD4.Parent = ScrollingFrame
+CMD4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CMD4.BackgroundTransparency = 1.000
+CMD4.BorderSizePixel = 0
+CMD4.Position = UDim2.new(0.1863354, 0, 0.163908944, 0)
+CMD4.Size = UDim2.new(0, 102, 0, 20)
+CMD4.Font = Enum.Font.SourceSans
+CMD4.Text = "-"
+CMD4.TextColor3 = Color3.fromRGB(255, 255, 255)
+CMD4.TextSize = 13.000
+
+CMD5.Name = "CMD5"
+CMD5.Parent = ScrollingFrame
+CMD5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CMD5.BackgroundTransparency = 1.000
+CMD5.BorderSizePixel = 0
+CMD5.Position = UDim2.new(0.1863354, 0, 0.211755842, 0)
+CMD5.Size = UDim2.new(0, 102, 0, 20)
+CMD5.Font = Enum.Font.SourceSans
+CMD5.Text = "-"
+CMD5.TextColor3 = Color3.fromRGB(255, 255, 255)
+CMD5.TextSize = 13.000
+
+CMD6.Name = "CMD6"
+CMD6.Parent = ScrollingFrame
+CMD6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CMD6.BackgroundTransparency = 1.000
+CMD6.BorderSizePixel = 0
+CMD6.Position = UDim2.new(0.1863354, 0, 0.259602726, 0)
+CMD6.Size = UDim2.new(0, 102, 0, 20)
+CMD6.Font = Enum.Font.SourceSans
+CMD6.Text = "-"
+CMD6.TextColor3 = Color3.fromRGB(255, 255, 255)
+CMD6.TextSize = 13.000
+
+CMD7.Name = "CMD7"
+CMD7.Parent = ScrollingFrame
+CMD7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CMD7.BackgroundTransparency = 1.000
+CMD7.BorderSizePixel = 0
+CMD7.Position = UDim2.new(0.1863354, 0, 0.307449609, 0)
+CMD7.Size = UDim2.new(0, 102, 0, 20)
+CMD7.Font = Enum.Font.SourceSans
+CMD7.Text = "-"
+CMD7.TextColor3 = Color3.fromRGB(255, 255, 255)
+CMD7.TextSize = 13.000
+
+CMD8.Name = "CMD8"
+CMD8.Parent = ScrollingFrame
+CMD8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CMD8.BackgroundTransparency = 1.000
+CMD8.BorderSizePixel = 0
+CMD8.Position = UDim2.new(0.1863354, 0, 0.355296493, 0)
+CMD8.Size = UDim2.new(0, 102, 0, 20)
+CMD8.Font = Enum.Font.SourceSans
+CMD8.Text = "-"
+CMD8.TextColor3 = Color3.fromRGB(255, 255, 255)
+CMD8.TextSize = 13.000
+
+CMD9.Name = "CMD9"
+CMD9.Parent = ScrollingFrame
+CMD9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CMD9.BackgroundTransparency = 1.000
+CMD9.BorderSizePixel = 0
+CMD9.Position = UDim2.new(0.1863354, 0, 0.355296493, 0)
+CMD9.Size = UDim2.new(0, 102, 0, 20)
+CMD9.Font = Enum.Font.SourceSans
+CMD9.Text = "-"
+CMD9.TextColor3 = Color3.fromRGB(255, 255, 255)
+CMD9.TextSize = 13.000
+
+CMD10.Name = "CMD10"
+CMD10.Parent = ScrollingFrame
+CMD10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CMD10.BackgroundTransparency = 1.000
+CMD10.BorderSizePixel = 0
+CMD10.Position = UDim2.new(0.1863354, 0, 0.403143376, 0)
+CMD10.Size = UDim2.new(0, 102, 0, 20)
+CMD10.Font = Enum.Font.SourceSans
+CMD10.Text = "-"
+CMD10.TextColor3 = Color3.fromRGB(255, 255, 255)
+CMD10.TextSize = 13.000
+
+CMD11.Name = "CMD11"
+CMD11.Parent = ScrollingFrame
+CMD11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CMD11.BackgroundTransparency = 1.000
+CMD11.BorderSizePixel = 0
+CMD11.Position = UDim2.new(0.1863354, 0, 0.45099026, 0)
+CMD11.Size = UDim2.new(0, 102, 0, 20)
+CMD11.Font = Enum.Font.SourceSans
+CMD11.Text = "-"
+CMD11.TextColor3 = Color3.fromRGB(255, 255, 255)
+CMD11.TextSize = 13.000
+
+CMD12.Name = "CMD12"
+CMD12.Parent = ScrollingFrame
+CMD12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CMD12.BackgroundTransparency = 1.000
+CMD12.BorderSizePixel = 0
+CMD12.Position = UDim2.new(0.1863354, 0, 0.498837143, 0)
+CMD12.Size = UDim2.new(0, 102, 0, 20)
+CMD12.Font = Enum.Font.SourceSans
+CMD12.Text = "-"
+CMD12.TextColor3 = Color3.fromRGB(255, 255, 255)
+CMD12.TextSize = 13.000
+
+CMD13.Name = "CMD13"
+CMD13.Parent = ScrollingFrame
+CMD13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CMD13.BackgroundTransparency = 1.000
+CMD13.BorderSizePixel = 0
+CMD13.Position = UDim2.new(0.1863354, 0, 0.546684027, 0)
+CMD13.Size = UDim2.new(0, 102, 0, 20)
+CMD13.Font = Enum.Font.SourceSans
+CMD13.Text = "-"
+CMD13.TextColor3 = Color3.fromRGB(255, 255, 255)
+CMD13.TextSize = 13.000
+
+CMD14.Name = "CMD14"
+CMD14.Parent = ScrollingFrame
+CMD14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CMD14.BackgroundTransparency = 1.000
+CMD14.BorderSizePixel = 0
+CMD14.Position = UDim2.new(0.1863354, 0, 0.59453094, 0)
+CMD14.Size = UDim2.new(0, 102, 0, 20)
+CMD14.Font = Enum.Font.SourceSans
+CMD14.Text = "-"
+CMD14.TextColor3 = Color3.fromRGB(255, 255, 255)
+CMD14.TextSize = 13.000
+
+CMD15.Name = "CMD15"
+CMD15.Parent = ScrollingFrame
+CMD15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CMD15.BackgroundTransparency = 1.000
+CMD15.BorderSizePixel = 0
+CMD15.Position = UDim2.new(0.1863354, 0, 0.642377853, 0)
+CMD15.Size = UDim2.new(0, 102, 0, 20)
+CMD15.Font = Enum.Font.SourceSans
+CMD15.Text = "-"
+CMD15.TextColor3 = Color3.fromRGB(255, 255, 255)
+CMD15.TextSize = 13.000
+
+CMD16.Name = "CMD16"
+CMD16.Parent = ScrollingFrame
+CMD16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CMD16.BackgroundTransparency = 1.000
+CMD16.BorderSizePixel = 0
+CMD16.Position = UDim2.new(0.1863354, 0, 0.690224767, 0)
+CMD16.Size = UDim2.new(0, 102, 0, 20)
+CMD16.Font = Enum.Font.SourceSans
+CMD16.Text = "-"
+CMD16.TextColor3 = Color3.fromRGB(255, 255, 255)
+CMD16.TextSize = 13.000
+
+CMD17.Name = "CMD17"
+CMD17.Parent = ScrollingFrame
+CMD17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CMD17.BackgroundTransparency = 1.000
+CMD17.BorderSizePixel = 0
+CMD17.Position = UDim2.new(0.1863354, 0, 0.73807168, 0)
+CMD17.Size = UDim2.new(0, 102, 0, 20)
+CMD17.Font = Enum.Font.SourceSans
+CMD17.Text = "-"
+CMD17.TextColor3 = Color3.fromRGB(255, 255, 255)
+CMD17.TextSize = 13.000
+
+CMD18.Name = "CMD18"
+CMD18.Parent = ScrollingFrame
+CMD18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CMD18.BackgroundTransparency = 1.000
+CMD18.BorderSizePixel = 0
+CMD18.Position = UDim2.new(0.1863354, 0, 0.785918593, 0)
+CMD18.Size = UDim2.new(0, 102, 0, 20)
+CMD18.Font = Enum.Font.SourceSans
+CMD18.Text = "-"
+CMD18.TextColor3 = Color3.fromRGB(255, 255, 255)
+CMD18.TextSize = 13.000
+
+CMD19.Name = "CMD19"
+CMD19.Parent = ScrollingFrame
+CMD19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CMD19.BackgroundTransparency = 1.000
+CMD19.BorderSizePixel = 0
+CMD19.Position = UDim2.new(0.1863354, 0, 0.833765447, 0)
+CMD19.Size = UDim2.new(0, 102, 0, 20)
+CMD19.Font = Enum.Font.SourceSans
+CMD19.Text = "-"
+CMD19.TextColor3 = Color3.fromRGB(255, 255, 255)
+CMD19.TextSize = 13.000
+
+CMD20.Name = "CMD20"
+CMD20.Parent = ScrollingFrame
+CMD20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CMD20.BackgroundTransparency = 1.000
+CMD20.BorderSizePixel = 0
+CMD20.Position = UDim2.new(0.1863354, 0, 0.88161236, 0)
+CMD20.Size = UDim2.new(0, 102, 0, 20)
+CMD20.Font = Enum.Font.SourceSans
+CMD20.Text = "-"
+CMD20.TextColor3 = Color3.fromRGB(255, 255, 255)
+CMD20.TextSize = 13.000
+
+CMD21.Name = "CMD21"
+CMD21.Parent = ScrollingFrame
+CMD21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CMD21.BackgroundTransparency = 1.000
+CMD21.BorderSizePixel = 0
+CMD21.Position = UDim2.new(0.1863354, 0, 0.929459274, 0)
+CMD21.Size = UDim2.new(0, 102, 0, 20)
+CMD21.Font = Enum.Font.SourceSans
+CMD21.Text = "-"
+CMD21.TextColor3 = Color3.fromRGB(255, 255, 255)
+CMD21.TextSize = 13.000
+
+-- Scripts:
+
+local function PTHTV_fake_script() -- CommandsFrame.DraggabelScript 
+	local script = Instance.new('LocalScript', CommandsFrame)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local starPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(starPos.X.Scale, starPos.X.Offset + delta.X, starPos.Y.Scale, starPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then
+			dragToggle = true
+			dragStart = input.Position
+			starPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(PTHTV_fake_script)()
+local function WMTUCD_fake_script() -- Commands.WorkingClose 
+	local script = Instance.new('LocalScript', Commands)
+
+	local poi = script.Parent.CommandsFrame
+	local Ex = poi.ExitButton
+	
+	Ex.MouseButton1Down:connect(function() 
+		poi.Visible = false
+	end)
+end
+coroutine.wrap(WMTUCD_fake_script)()
