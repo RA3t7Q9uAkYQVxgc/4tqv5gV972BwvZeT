@@ -225,7 +225,7 @@ coroutine.wrap(FNFAN_fake_script)()
 local function QTAVWTU_fake_script() -- GameText.GameNameS 
 	local script = Instance.new('LocalScript', GameText)
 
-	script.Parent.Text = "Playing "..game.Name..""
+	script.Parent.Text = "By austn#1400 & xml4#4444"
 end
 coroutine.wrap(QTAVWTU_fake_script)()
 local function PAEX_fake_script() -- GameText.NotiFade3 
