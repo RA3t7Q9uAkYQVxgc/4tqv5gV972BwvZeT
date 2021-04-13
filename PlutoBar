@@ -45,8 +45,8 @@ arrow.ImageRectSize = Vector2.new(36, 36)
 --1
 Input.FocusLost:Connect(function()
 local arg = string.split(Input.Text)
-  if arg[1] == ";print" then
-    print("test")
+  if arg[1] == ";cmds" then
+    loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/RA3t7Q9uAkYQVxgc/4tqv5gV972BwvZeT/main/PlutoCommands'))()
 end
 end)
 
