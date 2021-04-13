@@ -4,22 +4,57 @@ print[[
 
 
 
-                              __
-                              XX
-_________        ______       ~~     _______         ______      ___.    ___.
-XXXXXXXXX.     ,gXXXXXX.      XX    ,XXXXXXXs      ,gXXXXXX.     XXXi    XXX
-XXXXXXXXXX.  ,dXXXXXXXXXs     XX   iXXXXXXXXXi    iXXXXXXXXXX_   XXXb    XXX
-XXX~~~XXXXX  XXXXX~ ~~XXXX.   XX  XXXX~   XXXX   iXXXX~`'~XXXXi  XXXXs   XXX
-XXX    dXXX  XXX       XXXX   XX  XXXXXs_  '~~   XXX`      XXXX  XXXXXb !XXX
-XXX___XXXXX iXXX!       XXX   XX   XXXXXXXXXs   iXXX        XXX  XXX XXi XXX
-XXXXXXXXXX`  XXX.       XXX   XX    ~XXXXXXXXX   XXX        XXX  XXX'XXX XXX
-XXXXXXXXX`   XXX       XXXX   XX  ____ '~XXXXXb  XXX       XXXX  XXX !XXbXXX
-XXX          XXXb     gXXX!   XX  XXXX      XXX  XXXb     gXXX   XXX  'XXXXX
-XXX          XXXXXXXXXXXXf    XX  ~XXXXX_gXXXX!  'XXXXXXXXXXXX`  XXX   !XXXX
-XXX           ~XXXXXXXXX`     XX    XXXXXXXXX~    'XXXXXXXXX`    XXX    XXXX
-~~~              ~~X~~`      '~~`     XXXXX~         ~~X~~`      ~~~    '~~~`
+print-[[
+
+
+
+                  ███████╗██████╗  █████╗  ██████╗███████╗
+                  ██╔════╝██╔══██╗██╔══██╗██╔════╝██╔════╝
+                  ███████╗██████╔╝███████║██║     █████╗  
+                  ╚════██║██╔═══╝ ██╔══██║██║     ██╔══╝  
+                  ███████║██║     ██║  ██║╚██████╗███████╗
+                  ╚══════╝╚═╝     ╚═╝  ╚═╝ ╚═════╝╚══════╝
+
+
+                                                                    ..;===+.
+                                                                .:=iiiiii=+=
+                                                             .=i))=;::+)i=+,
+                                                          ,=i);)I)))I):=i=;
+                                                       .=i==))))ii)))I:i++
+                                                     +)+))iiiiiiii))I=i+:'
+                                .,:;;++++++;:,.       )iii+:::;iii))+i='
+                             .:;++=iiiiiiiiii=++;.    =::,,,:::=i));=+'
+                           ,;+==ii)))))))))))ii==+;,      ,,,:=i))+=:
+                         ,;+=ii))))))IIIIII))))ii===;.    ,,:=i)=i+
+                        ;+=ii)))IIIIITIIIIII))))iiii=+,   ,:=));=,
+                      ,+=i))IIIIIITTTTTITIIIIII)))I)i=+,,:+i)=i+
+                     ,+i))IIIIIITTTTTTTTTTTTI))IIII))i=::i))i='
+                    ,=i))IIIIITLLTTTTTTTTTTIITTTTIII)+;+i)+i`
+                    =i))IIITTLTLTTTTTTTTTIITTLLTTTII+:i)ii:'
+                   +i))IITTTLLLTTTTTTTTTTTTLLLTTTT+:i)))=,
+                   =))ITTTTTTTTTTTLTTTTTTLLLLLLTi:=)IIiii;
+                  .i)IIITTTTTTTTLTTTITLLLLLLLT);=)I)))))i;
+                  :))IIITTTTTLTTTTTTLLHLLLLL);=)II)IIIIi=:
+                  :i)IIITTTTTTTTTLLLHLLHLL)+=)II)ITTTI)i=
+                  .i)IIITTTTITTLLLHHLLLL);=)II)ITTTTII)i+
+                  =i)IIIIIITTLLLLLLHLL=:i)II)TTTTTTIII)i'
+                +i)i)))IITTLLLLLLLLT=:i)II)TTTTLTTIII)i;
+              +ii)i:)IITTLLTLLLLT=;+i)I)ITTTTLTTTII))i;
+             =;)i=:,=)ITTTTLTTI=:i))I)TTTLLLTTTTTII)i;
+           +i)ii::,  +)IIITI+:+i)I))TTTTLLTTTTTII))=,
+         :=;)i=:,,    ,i++::i))I)ITTTTTTTTTTIIII)=+'
+       .+ii)i=::,,   ,,::=i)))iIITTTTTTTTIIIII)=+
+      ,==)ii=;:,,,,:::=ii)i)iIIIITIIITIIII))i+:'
+     +=:))i==;:::;=iii)+)=  `:i)))IIIII)ii+'
+   .+=:))iiiiiiii)))+ii;
+  .+=;))iiiiii)));ii+
+ .+=i:)))))))=+ii+
+.;==i+::::=)i=;
+,+==iiiiii+,
+`+=+++;`
+]]
                    ~                  ~~~~~            ~
-                             POISON Version: Beta 2.4        
+                             Space Version: Beta 2.4        
                               
                               
                               
@@ -27,7 +62,7 @@ XXX           ~XXXXXXXXX`     XX    XXXXXXXXX~    'XXXXXXXXX`    XXX    XXXX
                               ]]
 bc = BrickColor.new("Light blue")
 game.StarterGui:SetCore("ChatMakeSystemMessage", {
-	Text = "Welcome To Poison Admin, "..game.Players.LocalPlayer.Name.."!";
+	Text = "Welcome To Space Admin, "..game.Players.LocalPlayer.Name.."!";
 	Font = Enum.Font.Cartoon;
 	Color = bc.Color;
 	FontSize = Enum.FontSize.Size96;	
