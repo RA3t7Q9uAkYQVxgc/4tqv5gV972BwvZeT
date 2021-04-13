@@ -1,0 +1,444 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Notifications = Instance.new("ScreenGui")
+local GameNoti = Instance.new("Frame")
+local Notification = Instance.new("TextLabel")
+local GameText = Instance.new("TextLabel")
+local notiimage = Instance.new("ImageButton")
+local WelcomeNoti = Instance.new("Frame")
+local Notification_2 = Instance.new("TextLabel")
+local Welcometext = Instance.new("TextLabel")
+local notiimage_2 = Instance.new("ImageButton")
+local PrefixNoti = Instance.new("Frame")
+local Notification_3 = Instance.new("TextLabel")
+local PrefixText = Instance.new("TextLabel")
+local notiimage_3 = Instance.new("ImageButton")
+local BarLoaded = Instance.new("Frame")
+local Notification_4 = Instance.new("TextLabel")
+local BarText = Instance.new("TextLabel")
+local notiimage_4 = Instance.new("ImageButton")
+
+--Properties:
+
+Notifications.Name = "Notifications"
+Notifications.Parent = game.CoreGui
+Notifications.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+GameNoti.Name = "GameNoti"
+GameNoti.Parent = Notifications
+GameNoti.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+GameNoti.BackgroundTransparency = 0.100
+GameNoti.BorderSizePixel = 0
+GameNoti.Position = UDim2.new(0.0116822431, 0, 0.836680055, 0)
+GameNoti.Size = UDim2.new(0, 189, 0, 51)
+
+Notification.Name = "Notification"
+Notification.Parent = GameNoti
+Notification.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Notification.BackgroundTransparency = 1.000
+Notification.Position = UDim2.new(0.158730149, 0, 0, 0)
+Notification.Size = UDim2.new(0, 128, 0, 15)
+Notification.Font = Enum.Font.Gotham
+Notification.Text = "Notification"
+Notification.TextColor3 = Color3.fromRGB(230, 230, 230)
+Notification.TextSize = 13.000
+Notification.TextWrapped = true
+
+GameText.Name = "GameText"
+GameText.Parent = GameNoti
+GameText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GameText.BackgroundTransparency = 1.000
+GameText.Position = UDim2.new(0, 0, 0.352941185, 0)
+GameText.Size = UDim2.new(0, 189, 0, 33)
+GameText.Font = Enum.Font.Gotham
+GameText.Text = " "
+GameText.TextColor3 = Color3.fromRGB(230, 230, 230)
+GameText.TextSize = 12.000
+GameText.TextWrapped = true
+GameText.TextYAlignment = Enum.TextYAlignment.Top
+
+notiimage.Name = "notiimage"
+notiimage.Parent = GameNoti
+notiimage.BackgroundTransparency = 1.000
+notiimage.LayoutOrder = 9
+notiimage.Position = UDim2.new(0.0292736106, 0, 0.0144893527, 0)
+notiimage.Size = UDim2.new(0, 15, 0, 13)
+notiimage.ZIndex = 2
+notiimage.Image = "rbxassetid://3926307971"
+notiimage.ImageColor3 = Color3.fromRGB(230, 230, 230)
+notiimage.ImageRectOffset = Vector2.new(444, 4)
+notiimage.ImageRectSize = Vector2.new(36, 36)
+
+WelcomeNoti.Name = "WelcomeNoti"
+WelcomeNoti.Parent = Notifications
+WelcomeNoti.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+WelcomeNoti.BackgroundTransparency = 0.100
+WelcomeNoti.BorderSizePixel = 0
+WelcomeNoti.Position = UDim2.new(0.0116822431, 0, 0.918340027, 0)
+WelcomeNoti.Size = UDim2.new(0, 189, 0, 51)
+
+Notification_2.Name = "Notification"
+Notification_2.Parent = WelcomeNoti
+Notification_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Notification_2.BackgroundTransparency = 1.000
+Notification_2.Position = UDim2.new(0.158730149, 0, 0, 0)
+Notification_2.Size = UDim2.new(0, 128, 0, 15)
+Notification_2.Font = Enum.Font.Gotham
+Notification_2.Text = "Notification"
+Notification_2.TextColor3 = Color3.fromRGB(230, 230, 230)
+Notification_2.TextSize = 13.000
+Notification_2.TextWrapped = true
+
+Welcometext.Name = "Welcometext"
+Welcometext.Parent = WelcomeNoti
+Welcometext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Welcometext.BackgroundTransparency = 1.000
+Welcometext.Position = UDim2.new(0, 0, 0.352941185, 0)
+Welcometext.Size = UDim2.new(0, 189, 0, 33)
+Welcometext.Font = Enum.Font.Gotham
+Welcometext.Text = " "
+Welcometext.TextColor3 = Color3.fromRGB(230, 230, 230)
+Welcometext.TextSize = 10.000
+Welcometext.TextWrapped = true
+Welcometext.TextYAlignment = Enum.TextYAlignment.Top
+
+notiimage_2.Name = "notiimage"
+notiimage_2.Parent = WelcomeNoti
+notiimage_2.BackgroundTransparency = 1.000
+notiimage_2.LayoutOrder = 9
+notiimage_2.Position = UDim2.new(0.0292736106, 0, 0.0177179575, 0)
+notiimage_2.Size = UDim2.new(0, 15, 0, 13)
+notiimage_2.ZIndex = 2
+notiimage_2.Image = "rbxassetid://3926307971"
+notiimage_2.ImageColor3 = Color3.fromRGB(230, 230, 230)
+notiimage_2.ImageRectOffset = Vector2.new(444, 4)
+notiimage_2.ImageRectSize = Vector2.new(36, 36)
+
+PrefixNoti.Name = "PrefixNoti"
+PrefixNoti.Parent = Notifications
+PrefixNoti.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+PrefixNoti.BackgroundTransparency = 0.100
+PrefixNoti.BorderSizePixel = 0
+PrefixNoti.Position = UDim2.new(0.0116822431, 0, 0.753681421, 0)
+PrefixNoti.Size = UDim2.new(0, 189, 0, 51)
+
+Notification_3.Name = "Notification"
+Notification_3.Parent = PrefixNoti
+Notification_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Notification_3.BackgroundTransparency = 1.000
+Notification_3.Position = UDim2.new(0.158730149, 0, 0, 0)
+Notification_3.Size = UDim2.new(0, 128, 0, 15)
+Notification_3.Font = Enum.Font.Gotham
+Notification_3.Text = "Notification"
+Notification_3.TextColor3 = Color3.fromRGB(230, 230, 230)
+Notification_3.TextSize = 13.000
+Notification_3.TextWrapped = true
+
+PrefixText.Name = "PrefixText"
+PrefixText.Parent = PrefixNoti
+PrefixText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PrefixText.BackgroundTransparency = 1.000
+PrefixText.Position = UDim2.new(0, 0, 0.352941185, 0)
+PrefixText.Size = UDim2.new(0, 189, 0, 33)
+PrefixText.Font = Enum.Font.Gotham
+PrefixText.Text = " "
+PrefixText.TextColor3 = Color3.fromRGB(230, 230, 230)
+PrefixText.TextSize = 12.000
+PrefixText.TextWrapped = true
+PrefixText.TextYAlignment = Enum.TextYAlignment.Top
+
+notiimage_3.Name = "notiimage"
+notiimage_3.Parent = PrefixNoti
+notiimage_3.BackgroundTransparency = 1.000
+notiimage_3.LayoutOrder = 9
+notiimage_3.Position = UDim2.new(0.0292736106, 0, 0.00992202759, 0)
+notiimage_3.Size = UDim2.new(0, 15, 0, 13)
+notiimage_3.ZIndex = 2
+notiimage_3.Image = "rbxassetid://3926307971"
+notiimage_3.ImageColor3 = Color3.fromRGB(230, 230, 230)
+notiimage_3.ImageRectOffset = Vector2.new(444, 4)
+notiimage_3.ImageRectSize = Vector2.new(36, 36)
+
+BarLoaded.Name = "BarLoaded"
+BarLoaded.Parent = Notifications
+BarLoaded.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+BarLoaded.BackgroundTransparency = 0.100
+BarLoaded.BorderSizePixel = 0
+BarLoaded.Position = UDim2.new(0.0116822431, 0, 0.670682728, 0)
+BarLoaded.Size = UDim2.new(0, 189, 0, 51)
+
+Notification_4.Name = "Notification"
+Notification_4.Parent = BarLoaded
+Notification_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Notification_4.BackgroundTransparency = 1.000
+Notification_4.Position = UDim2.new(0.158730149, 0, 0, 0)
+Notification_4.Size = UDim2.new(0, 128, 0, 15)
+Notification_4.Font = Enum.Font.Gotham
+Notification_4.Text = "Notification"
+Notification_4.TextColor3 = Color3.fromRGB(230, 230, 230)
+Notification_4.TextSize = 13.000
+Notification_4.TextWrapped = true
+
+BarText.Name = "BarText"
+BarText.Parent = BarLoaded
+BarText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BarText.BackgroundTransparency = 1.000
+BarText.Position = UDim2.new(0, 0, 0.352941185, 0)
+BarText.Size = UDim2.new(0, 189, 0, 33)
+BarText.Font = Enum.Font.Gotham
+BarText.Text = " "
+BarText.TextColor3 = Color3.fromRGB(230, 230, 230)
+BarText.TextSize = 12.000
+BarText.TextWrapped = true
+BarText.TextYAlignment = Enum.TextYAlignment.Top
+
+notiimage_4.Name = "notiimage"
+notiimage_4.Parent = BarLoaded
+notiimage_4.BackgroundTransparency = 1.000
+notiimage_4.LayoutOrder = 9
+notiimage_4.Position = UDim2.new(0.0292736106, 0, 0.00992202759, 0)
+notiimage_4.Size = UDim2.new(0, 15, 0, 13)
+notiimage_4.ZIndex = 2
+notiimage_4.Image = "rbxassetid://3926307971"
+notiimage_4.ImageColor3 = Color3.fromRGB(230, 230, 230)
+notiimage_4.ImageRectOffset = Vector2.new(444, 4)
+notiimage_4.ImageRectSize = Vector2.new(36, 36)
+
+-- Scripts:
+
+local function NERN_fake_script() -- Notification.NotiFade2 
+	local script = Instance.new('Script', Notification)
+
+	wait(4)
+	while true do
+		wait(0.1)
+		script.Parent.TextTransparency = script.Parent.TextTransparency + 0.01
+		if script.Parent.TextTransparency == 1 then
+			break
+		end
+	end
+end
+coroutine.wrap(NERN_fake_script)()
+local function EDDPWH_fake_script() -- GameText.GameNameS 
+	local script = Instance.new('LocalScript', GameText)
+
+	script.Parent.Text = "Playing "..game.Name..""
+end
+coroutine.wrap(EDDPWH_fake_script)()
+local function HLVWL_fake_script() -- GameText.NotiFade3 
+	local script = Instance.new('Script', GameText)
+
+	wait(4)
+	while true do
+		wait(0.1)
+		script.Parent.TextTransparency = script.Parent.TextTransparency + 0.01
+		if script.Parent.TextTransparency == 1 then
+			break
+		end
+	end
+end
+coroutine.wrap(HLVWL_fake_script)()
+local function GZFF_fake_script() -- GameNoti.NotiFade1 
+	local script = Instance.new('Script', GameNoti)
+
+	wait(4)
+	while true do
+		wait(0.1)
+		script.Parent.BackgroundTransparency = script.Parent.BackgroundTransparency + 0.01
+		if script.Parent.BackgroundTransparency == 1 then
+			break
+		end
+	end
+end
+coroutine.wrap(GZFF_fake_script)()
+local function NBMNDEC_fake_script() -- notiimage.ImageFade 
+	local script = Instance.new('Script', notiimage)
+
+	wait(5)
+	while true do
+		wait(0.1)
+		script.Parent.ImageTransparency = script.Parent.ImageTransparency + 0.01
+		if script.Parent.ImageTransparency == 1 then
+			break
+		end
+	end
+end
+coroutine.wrap(NBMNDEC_fake_script)()
+local function ZQVP_fake_script() -- Notification_2.NotiFade2 
+	local script = Instance.new('Script', Notification_2)
+
+	wait(5)
+	while true do
+		wait(0.1)
+		script.Parent.TextTransparency = script.Parent.TextTransparency + 0.01
+		if script.Parent.TextTransparency == 1 then
+			break
+		end
+	end
+end
+coroutine.wrap(ZQVP_fake_script)()
+local function ERUCLH_fake_script() -- WelcomeNoti.NotiFade1 
+	local script = Instance.new('Script', WelcomeNoti)
+
+	wait(5)
+	while true do
+		wait(0.1)
+		script.Parent.BackgroundTransparency = script.Parent.BackgroundTransparency + 0.01
+		if script.Parent.BackgroundTransparency == 1 then
+			break
+		end
+	end
+end
+coroutine.wrap(ERUCLH_fake_script)()
+local function SCPL_fake_script() -- Welcometext.WelcomeS 
+	local script = Instance.new('LocalScript', Welcometext)
+
+	script.Parent.Text = "Welcome, ".. game.Players.LocalPlayer.Name ..". Thanks For Loading Pluto"
+	
+end
+coroutine.wrap(SCPL_fake_script)()
+local function PTWJT_fake_script() -- Welcometext.NotiFade3 
+	local script = Instance.new('Script', Welcometext)
+
+	wait(5)
+	while true do
+		wait(0.1)
+		script.Parent.TextTransparency = script.Parent.TextTransparency + 0.01
+		if script.Parent.TextTransparency == 1 then
+			break
+		end
+	end
+end
+coroutine.wrap(PTWJT_fake_script)()
+local function MNYG_fake_script() -- notiimage_2.ImageFade 
+	local script = Instance.new('Script', notiimage_2)
+
+	wait(5)
+	while true do
+		wait(0.1)
+		script.Parent.ImageTransparency = script.Parent.ImageTransparency + 0.01
+		if script.Parent.ImageTransparency == 1 then
+			break
+		end
+	end
+end
+coroutine.wrap(MNYG_fake_script)()
+local function VVQGNX_fake_script() -- Notification_3.NotiFade2 
+	local script = Instance.new('Script', Notification_3)
+
+	wait(4)
+	while true do
+		wait(0.1)
+		script.Parent.TextTransparency = script.Parent.TextTransparency + 0.01
+		if script.Parent.TextTransparency == 1 then
+			break
+		end
+	end
+end
+coroutine.wrap(VVQGNX_fake_script)()
+local function HTYF_fake_script() -- PrefixText.PrefixS 
+	local script = Instance.new('LocalScript', PrefixText)
+
+	script.Parent.Text = "Command Bar Prefix ;"
+end
+coroutine.wrap(HTYF_fake_script)()
+local function QJAWVU_fake_script() -- PrefixText.NotiFade3 
+	local script = Instance.new('Script', PrefixText)
+
+	wait(4)
+	while true do
+		wait(0.1)
+		script.Parent.TextTransparency = script.Parent.TextTransparency + 0.01
+		if script.Parent.TextTransparency == 1 then
+			break
+		end
+	end
+end
+coroutine.wrap(QJAWVU_fake_script)()
+local function PAJQ_fake_script() -- PrefixNoti.NotiFade1 
+	local script = Instance.new('Script', PrefixNoti)
+
+	wait(4)
+	while true do
+		wait(0.1)
+		script.Parent.BackgroundTransparency = script.Parent.BackgroundTransparency + 0.01
+		if script.Parent.BackgroundTransparency == 1 then
+			break
+		end
+	end
+end
+coroutine.wrap(PAJQ_fake_script)()
+local function MGJURR_fake_script() -- notiimage_3.ImageFade 
+	local script = Instance.new('Script', notiimage_3)
+
+	wait(5)
+	while true do
+		wait(0.1)
+		script.Parent.ImageTransparency = script.Parent.ImageTransparency + 0.01
+		if script.Parent.ImageTransparency == 1 then
+			break
+		end
+	end
+end
+coroutine.wrap(MGJURR_fake_script)()
+local function MDWCY_fake_script() -- Notification_4.NotiFade2 
+	local script = Instance.new('Script', Notification_4)
+
+	wait(4)
+	while true do
+		wait(0.1)
+		script.Parent.TextTransparency = script.Parent.TextTransparency + 0.01
+		if script.Parent.TextTransparency == 1 then
+			break
+		end
+	end
+end
+coroutine.wrap(MDWCY_fake_script)()
+local function MMAE_fake_script() -- BarText.BarS 
+	local script = Instance.new('LocalScript', BarText)
+
+	script.Parent.Text = "Command Bar Successfuly Loaded."
+end
+coroutine.wrap(MMAE_fake_script)()
+local function DZMQDR_fake_script() -- BarText.NotiFade3 
+	local script = Instance.new('Script', BarText)
+
+	wait(4)
+	while true do
+		wait(0.1)
+		script.Parent.TextTransparency = script.Parent.TextTransparency + 0.01
+		if script.Parent.TextTransparency == 1 then
+			break
+		end
+	end
+end
+coroutine.wrap(DZMQDR_fake_script)()
+local function NYEKHFK_fake_script() -- BarLoaded.NotiFade1 
+	local script = Instance.new('Script', BarLoaded)
+
+	wait(4)
+	while true do
+		wait(0.1)
+		script.Parent.BackgroundTransparency = script.Parent.BackgroundTransparency + 0.01
+		if script.Parent.BackgroundTransparency == 1 then
+			break
+		end
+	end
+end
+coroutine.wrap(NYEKHFK_fake_script)()
+local function NOOWZPZ_fake_script() -- notiimage_4.ImageFade 
+	local script = Instance.new('Script', notiimage_4)
+
+	wait(5)
+	while true do
+		wait(0.1)
+		script.Parent.ImageTransparency = script.Parent.ImageTransparency + 0.01
+		if script.Parent.ImageTransparency == 1 then
+			break
+		end
+	end
+end
+coroutine.wrap(NOOWZPZ_fake_script)()
