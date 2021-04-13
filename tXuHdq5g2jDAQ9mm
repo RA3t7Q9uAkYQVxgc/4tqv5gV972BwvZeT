@@ -82,8 +82,7 @@ game.StarterGui:SetCore("ChatMakeSystemMessage", {
 	FontSize = Enum.FontSize.Size96;	
 })
 
---CmdBar
-loadstring(game:HttpGet(("https://raw.githubusercontent.com/RA3t7Q9uAkYQVxgc/4tqv5gV972BwvZeT/main/PoisonCmdBar"), true))()
+
 --CmdsGui
 game.Players.LocalPlayer.Chatted:connect(function(cmd) 
     if cmd:match(_G.prefix.."cmds") then
