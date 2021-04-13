@@ -1,85 +1,41 @@
-
 local PoisonBar = Instance.new("ScreenGui")
 local CMDBar = Instance.new("Frame")
 local Input = Instance.new("TextBox")
-local Gradient = Instance.new("Frame")
-local UIGradient = Instance.new("UIGradient")
-
+local arrow = Instance.new("ImageButton")
 PoisonBar.Name = "PoisonBar"
-PoisonBar.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+PoisonBar.Parent = game.CoreGui 
 PoisonBar.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+PoisonBar.ResetOnSpawn = false
 CMDBar.Name = "CMDBar"
 CMDBar.Parent = PoisonBar
-CMDBar.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+CMDBar.AnchorPoint = Vector2.new(0.5, 1)
+CMDBar.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 CMDBar.BackgroundTransparency = 0.100
 CMDBar.BorderSizePixel = 0
-CMDBar.Position = UDim2.new(-0.300000012, 0, 0.888000011, 0)
-CMDBar.Size = UDim2.new(0, 225, 0, 29)
+CMDBar.Position = UDim2.new(0.5, 0, 1, 35)
+CMDBar.Size = UDim2.new(0, 162, 0, 32)
 Input.Name = "Input"
 Input.Parent = CMDBar
 Input.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Input.BackgroundTransparency = 1.000
-Input.Size = UDim2.new(0, 224, 0, 29)
+Input.Position = UDim2.new(0.144691378, 0, 0, 0)
+Input.Size = UDim2.new(0, 140, 0, 32)
 Input.Font = Enum.Font.Gotham
-Input.PlaceholderText = "Command"
+Input.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
 Input.Text = ""
-Input.TextColor3 = Color3.fromRGB(255, 255, 255)
-Input.TextSize = 15.000
-Gradient.Name = "Gradient"
-Gradient.Parent = CMDBar
-Gradient.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Gradient.BorderColor3 = Color3.fromRGB(27, 42, 53)
-Gradient.BorderSizePixel = 0
-Gradient.Position = UDim2.new(0, 0, 1, 0)
-Gradient.Size = UDim2.new(0, 225, 0, 3)
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(57, 104, 252)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(51, 68, 175))}
-UIGradient.Parent = Gradient
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Input.TextColor3 = Color3.fromRGB(230, 230, 230)
+Input.TextSize = 14.000
+Input.TextXAlignment = Enum.TextXAlignment.Left
+arrow.Name = "arrow"
+arrow.Parent = CMDBar
+arrow.BackgroundTransparency = 1.000
+arrow.Position = UDim2.new(-0.000865370035, 0, 0.151397228, 0)
+arrow.Size = UDim2.new(0, 22, 0, 22)
+arrow.ZIndex = 2
+arrow.Image = "rbxassetid://3926305904"
+arrow.ImageColor3 = Color3.fromRGB(230, 230, 230)
+arrow.ImageRectOffset = Vector2.new(964, 284)
+arrow.ImageRectSize = Vector2.new(36, 36)
 
 
 
@@ -105,121 +61,46 @@ end)
 
 
 
+-- Makes Tween Work --
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
---IGnore
---[[
-Dont Put
-Comannds
-Below This
-]]
--- ALL TWEENS BELOW, IGNORE THESE PERMANTLY
--- Tweens
-local function ULYZ_fake_script() -- PoisonBar.tweenbar 
+local function PAVQL_fake_script() -- PoisonBar.tweenbar 
 	local script = Instance.new('LocalScript', PoisonBar)
 
-
+	--[[
+	Top Bar
+	local PositionClosed = UDim2.new(0.5, 0,1, -760)
+	local PositionOpen = UDim2.new(0.5, 0,1, -666)
+	
+	Bottom Bar
+	local PositionClosed = UDim2.new(0.5, 0,1, 35)
+	local PositionOpen = UDim2.new(0.5, 0,1, -70)
+	]]
+	
+	local UI = script.Parent
+	local CMDBar = UI.CMDBar
+	local Input = CMDBar.Input
+	
+	
 	local Bar = script.Parent.CMDBar
 	local Open = false
 	local plr = game.Players.LocalPlayer
-
-	local PositionClosed = UDim2.new(-0.3, 0,0.888, 0)
-	local PositionOpen = UDim2.new(0.011, 0,0.888, 0)
-
-
-
+	
+	local PositionClosed = UDim2.new(0.5, 0,1, 35)
+	local PositionOpen = UDim2.new(0.5, 0,1, -70)
+	
+	
+	
 	plr:GetMouse().KeyDown:Connect(function(K)
 		if K == ';' then
 			Input:CaptureFocus()
 			Input.Text = ""
-			Bar:TweenPosition((PositionOpen),'Out','Linear',.25)
-		end
-	end)
+				Bar:TweenPosition((PositionOpen),'Out','Linear',.20)
+			end
+		end)
 	Input.FocusLost:Connect(function(enterPressed)
 		if enterPressed then 
-			Bar:TweenPosition((PositionClosed),"Out","Linear",.25)
+			Bar:TweenPosition((PositionClosed),"Out","Linear",.20)
 		end
 	end)
 end
-coroutine.wrap(ULYZ_fake_script)()
--- End Of Tweens
+coroutine.wrap(PAVQL_fake_script)()
