@@ -56,7 +56,7 @@ GameText.Size = UDim2.new(0, 189, 0, 33)
 GameText.Font = Enum.Font.Gotham
 GameText.Text = " "
 GameText.TextColor3 = Color3.fromRGB(230, 230, 230)
-GameText.TextSize = 12.000
+GameText.TextSize = 11.000
 GameText.TextWrapped = true
 GameText.TextYAlignment = Enum.TextYAlignment.Top
 
@@ -225,7 +225,7 @@ coroutine.wrap(FNFAN_fake_script)()
 local function QTAVWTU_fake_script() -- GameText.GameNameS 
 	local script = Instance.new('LocalScript', GameText)
 
-	script.Parent.Text = "By austn#1400 & xml4#4444"
+	script.Parent.Text = "Pluto Admin Made By austn#1400 aka Pluto"
 end
 coroutine.wrap(QTAVWTU_fake_script)()
 local function PAEX_fake_script() -- GameText.NotiFade3 
