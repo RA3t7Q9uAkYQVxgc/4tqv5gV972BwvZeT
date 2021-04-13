@@ -24,7 +24,7 @@ local notiimage_4 = Instance.new("ImageButton")
 --Properties:
 
 Notifications.Name = "Notifications"
-Notifications.Parent = game.CoreGui
+Notifications.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 Notifications.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 GameNoti.Name = "GameNoti"
@@ -32,7 +32,7 @@ GameNoti.Parent = Notifications
 GameNoti.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 GameNoti.BackgroundTransparency = 0.100
 GameNoti.BorderSizePixel = 0
-GameNoti.Position = UDim2.new(0.0116822431, 0, 0.836680055, 0)
+GameNoti.Position = UDim2.new(0.00467289705, 0, 0.881176591, 0)
 GameNoti.Size = UDim2.new(0, 189, 0, 51)
 
 Notification.Name = "Notification"
@@ -77,7 +77,7 @@ WelcomeNoti.Parent = Notifications
 WelcomeNoti.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 WelcomeNoti.BackgroundTransparency = 0.100
 WelcomeNoti.BorderSizePixel = 0
-WelcomeNoti.Position = UDim2.new(0.0116822431, 0, 0.918340027, 0)
+WelcomeNoti.Position = UDim2.new(0.00467289705, 0, 0.931726933, 0)
 WelcomeNoti.Size = UDim2.new(0, 189, 0, 51)
 
 Notification_2.Name = "Notification"
@@ -122,7 +122,7 @@ PrefixNoti.Parent = Notifications
 PrefixNoti.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 PrefixNoti.BackgroundTransparency = 0.100
 PrefixNoti.BorderSizePixel = 0
-PrefixNoti.Position = UDim2.new(0.0116822431, 0, 0.753681421, 0)
+PrefixNoti.Position = UDim2.new(0.00467288494, 0, 0.829986632, 0)
 PrefixNoti.Size = UDim2.new(0, 189, 0, 51)
 
 Notification_3.Name = "Notification"
@@ -167,7 +167,7 @@ BarLoaded.Parent = Notifications
 BarLoaded.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 BarLoaded.BackgroundTransparency = 0.100
 BarLoaded.BorderSizePixel = 0
-BarLoaded.Position = UDim2.new(0.0116822431, 0, 0.670682728, 0)
+BarLoaded.Position = UDim2.new(0.00467287935, 0, 0.779116392, 0)
 BarLoaded.Size = UDim2.new(0, 189, 0, 51)
 
 Notification_4.Name = "Notification"
@@ -209,7 +209,7 @@ notiimage_4.ImageRectSize = Vector2.new(36, 36)
 
 -- Scripts:
 
-local function NERN_fake_script() -- Notification.NotiFade2 
+local function FNFAN_fake_script() -- Notification.NotiFade2 
 	local script = Instance.new('Script', Notification)
 
 	wait(4)
@@ -221,14 +221,14 @@ local function NERN_fake_script() -- Notification.NotiFade2
 		end
 	end
 end
-coroutine.wrap(NERN_fake_script)()
-local function EDDPWH_fake_script() -- GameText.GameNameS 
+coroutine.wrap(FNFAN_fake_script)()
+local function QTAVWTU_fake_script() -- GameText.GameNameS 
 	local script = Instance.new('LocalScript', GameText)
 
 	script.Parent.Text = "Playing "..game.Name..""
 end
-coroutine.wrap(EDDPWH_fake_script)()
-local function HLVWL_fake_script() -- GameText.NotiFade3 
+coroutine.wrap(QTAVWTU_fake_script)()
+local function PAEX_fake_script() -- GameText.NotiFade3 
 	local script = Instance.new('Script', GameText)
 
 	wait(4)
@@ -240,8 +240,8 @@ local function HLVWL_fake_script() -- GameText.NotiFade3
 		end
 	end
 end
-coroutine.wrap(HLVWL_fake_script)()
-local function GZFF_fake_script() -- GameNoti.NotiFade1 
+coroutine.wrap(PAEX_fake_script)()
+local function HHEF_fake_script() -- GameNoti.NotiFade1 
 	local script = Instance.new('Script', GameNoti)
 
 	wait(4)
@@ -253,8 +253,8 @@ local function GZFF_fake_script() -- GameNoti.NotiFade1
 		end
 	end
 end
-coroutine.wrap(GZFF_fake_script)()
-local function NBMNDEC_fake_script() -- notiimage.ImageFade 
+coroutine.wrap(HHEF_fake_script)()
+local function GQTGEIQ_fake_script() -- notiimage.ImageFade 
 	local script = Instance.new('Script', notiimage)
 
 	wait(5)
@@ -266,8 +266,8 @@ local function NBMNDEC_fake_script() -- notiimage.ImageFade
 		end
 	end
 end
-coroutine.wrap(NBMNDEC_fake_script)()
-local function ZQVP_fake_script() -- Notification_2.NotiFade2 
+coroutine.wrap(GQTGEIQ_fake_script)()
+local function JAKTB_fake_script() -- Notification_2.NotiFade2 
 	local script = Instance.new('Script', Notification_2)
 
 	wait(5)
@@ -279,8 +279,8 @@ local function ZQVP_fake_script() -- Notification_2.NotiFade2
 		end
 	end
 end
-coroutine.wrap(ZQVP_fake_script)()
-local function ERUCLH_fake_script() -- WelcomeNoti.NotiFade1 
+coroutine.wrap(JAKTB_fake_script)()
+local function MGKGQ_fake_script() -- WelcomeNoti.NotiFade1 
 	local script = Instance.new('Script', WelcomeNoti)
 
 	wait(5)
@@ -292,15 +292,15 @@ local function ERUCLH_fake_script() -- WelcomeNoti.NotiFade1
 		end
 	end
 end
-coroutine.wrap(ERUCLH_fake_script)()
-local function SCPL_fake_script() -- Welcometext.WelcomeS 
+coroutine.wrap(MGKGQ_fake_script)()
+local function UBIA_fake_script() -- Welcometext.WelcomeS 
 	local script = Instance.new('LocalScript', Welcometext)
 
 	script.Parent.Text = "Welcome, ".. game.Players.LocalPlayer.Name ..". Thanks For Loading Pluto"
 	
 end
-coroutine.wrap(SCPL_fake_script)()
-local function PTWJT_fake_script() -- Welcometext.NotiFade3 
+coroutine.wrap(UBIA_fake_script)()
+local function JSANH_fake_script() -- Welcometext.NotiFade3 
 	local script = Instance.new('Script', Welcometext)
 
 	wait(5)
@@ -312,8 +312,8 @@ local function PTWJT_fake_script() -- Welcometext.NotiFade3
 		end
 	end
 end
-coroutine.wrap(PTWJT_fake_script)()
-local function MNYG_fake_script() -- notiimage_2.ImageFade 
+coroutine.wrap(JSANH_fake_script)()
+local function EOBEHS_fake_script() -- notiimage_2.ImageFade 
 	local script = Instance.new('Script', notiimage_2)
 
 	wait(5)
@@ -325,8 +325,8 @@ local function MNYG_fake_script() -- notiimage_2.ImageFade
 		end
 	end
 end
-coroutine.wrap(MNYG_fake_script)()
-local function VVQGNX_fake_script() -- Notification_3.NotiFade2 
+coroutine.wrap(EOBEHS_fake_script)()
+local function DOQOVNP_fake_script() -- Notification_3.NotiFade2 
 	local script = Instance.new('Script', Notification_3)
 
 	wait(4)
@@ -338,14 +338,14 @@ local function VVQGNX_fake_script() -- Notification_3.NotiFade2
 		end
 	end
 end
-coroutine.wrap(VVQGNX_fake_script)()
-local function HTYF_fake_script() -- PrefixText.PrefixS 
+coroutine.wrap(DOQOVNP_fake_script)()
+local function PGIZA_fake_script() -- PrefixText.PrefixS 
 	local script = Instance.new('LocalScript', PrefixText)
 
 	script.Parent.Text = "Command Bar Prefix ;"
 end
-coroutine.wrap(HTYF_fake_script)()
-local function QJAWVU_fake_script() -- PrefixText.NotiFade3 
+coroutine.wrap(PGIZA_fake_script)()
+local function UEGOLR_fake_script() -- PrefixText.NotiFade3 
 	local script = Instance.new('Script', PrefixText)
 
 	wait(4)
@@ -357,8 +357,8 @@ local function QJAWVU_fake_script() -- PrefixText.NotiFade3
 		end
 	end
 end
-coroutine.wrap(QJAWVU_fake_script)()
-local function PAJQ_fake_script() -- PrefixNoti.NotiFade1 
+coroutine.wrap(UEGOLR_fake_script)()
+local function UREHQEM_fake_script() -- PrefixNoti.NotiFade1 
 	local script = Instance.new('Script', PrefixNoti)
 
 	wait(4)
@@ -370,8 +370,8 @@ local function PAJQ_fake_script() -- PrefixNoti.NotiFade1
 		end
 	end
 end
-coroutine.wrap(PAJQ_fake_script)()
-local function MGJURR_fake_script() -- notiimage_3.ImageFade 
+coroutine.wrap(UREHQEM_fake_script)()
+local function VTPC_fake_script() -- notiimage_3.ImageFade 
 	local script = Instance.new('Script', notiimage_3)
 
 	wait(5)
@@ -383,8 +383,8 @@ local function MGJURR_fake_script() -- notiimage_3.ImageFade
 		end
 	end
 end
-coroutine.wrap(MGJURR_fake_script)()
-local function MDWCY_fake_script() -- Notification_4.NotiFade2 
+coroutine.wrap(VTPC_fake_script)()
+local function IOILRE_fake_script() -- Notification_4.NotiFade2 
 	local script = Instance.new('Script', Notification_4)
 
 	wait(4)
@@ -396,14 +396,14 @@ local function MDWCY_fake_script() -- Notification_4.NotiFade2
 		end
 	end
 end
-coroutine.wrap(MDWCY_fake_script)()
-local function MMAE_fake_script() -- BarText.BarS 
+coroutine.wrap(IOILRE_fake_script)()
+local function PWKNTR_fake_script() -- BarText.BarS 
 	local script = Instance.new('LocalScript', BarText)
 
 	script.Parent.Text = "Command Bar Successfuly Loaded."
 end
-coroutine.wrap(MMAE_fake_script)()
-local function DZMQDR_fake_script() -- BarText.NotiFade3 
+coroutine.wrap(PWKNTR_fake_script)()
+local function TDDAOCE_fake_script() -- BarText.NotiFade3 
 	local script = Instance.new('Script', BarText)
 
 	wait(4)
@@ -415,8 +415,8 @@ local function DZMQDR_fake_script() -- BarText.NotiFade3
 		end
 	end
 end
-coroutine.wrap(DZMQDR_fake_script)()
-local function NYEKHFK_fake_script() -- BarLoaded.NotiFade1 
+coroutine.wrap(TDDAOCE_fake_script)()
+local function PASTTKJ_fake_script() -- BarLoaded.NotiFade1 
 	local script = Instance.new('Script', BarLoaded)
 
 	wait(4)
@@ -428,8 +428,8 @@ local function NYEKHFK_fake_script() -- BarLoaded.NotiFade1
 		end
 	end
 end
-coroutine.wrap(NYEKHFK_fake_script)()
-local function NOOWZPZ_fake_script() -- notiimage_4.ImageFade 
+coroutine.wrap(PASTTKJ_fake_script)()
+local function JZWS_fake_script() -- notiimage_4.ImageFade 
 	local script = Instance.new('Script', notiimage_4)
 
 	wait(5)
@@ -441,4 +441,4 @@ local function NOOWZPZ_fake_script() -- notiimage_4.ImageFade
 		end
 	end
 end
-coroutine.wrap(NOOWZPZ_fake_script)()
+coroutine.wrap(JZWS_fake_script)()
