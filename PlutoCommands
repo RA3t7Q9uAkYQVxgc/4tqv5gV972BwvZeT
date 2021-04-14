@@ -8,9 +8,8 @@ local CommandsFrame = Instance.new("Frame")
 local CommandsSearch = Instance.new("TextBox")
 local ExitButton = Instance.new("ImageButton")
 local Items = Instance.new("ScrollingFrame")
-local Fly = Instance.new("TextLabel")
+local cmds = Instance.new("TextLabel")
 local UIListLayout = Instance.new("UIListLayout")
-local hack = Instance.new("TextLabel")
 
 --Properties:
 
@@ -62,32 +61,22 @@ Items.Position = UDim2.new(0.0246913433, 0, 0.134078026, 0)
 Items.Size = UDim2.new(0, 154, 0, 149)
 Items.ScrollBarThickness = 3
 
-Fly.Name = "Fly"
-Fly.Parent = Items
-Fly.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Fly.BackgroundTransparency = 1.000
-Fly.Size = UDim2.new(0, 154, 0, 21)
-Fly.Font = Enum.Font.Gotham
-Fly.Text = "fly"
-Fly.TextColor3 = Color3.fromRGB(240, 240, 240)
-Fly.TextSize = 14.000
+cmds.Name = "cmds"
+cmds.Parent = Items
+cmds.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+cmds.BackgroundTransparency = 1.000
+cmds.Size = UDim2.new(0, 154, 0, 21)
+cmds.Font = Enum.Font.Gotham
+cmds.Text = "cmds"
+cmds.TextColor3 = Color3.fromRGB(240, 240, 240)
+cmds.TextSize = 14.000
 
 UIListLayout.Parent = Items
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 
-hack.Name = "hack"
-hack.Parent = Items
-hack.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-hack.BackgroundTransparency = 1.000
-hack.Size = UDim2.new(0, 154, 0, 21)
-hack.Font = Enum.Font.Gotham
-hack.Text = "hack"
-hack.TextColor3 = Color3.fromRGB(240, 240, 240)
-hack.TextSize = 14.000
-
 -- Scripts:
 
-local function MYIWKRZ_fake_script() -- CommandsFrame.DragScript 
+local function UCSO_fake_script() -- CommandsFrame.DragScript 
 	local script = Instance.new('LocalScript', CommandsFrame)
 
 	local UIS = game:GetService('UserInputService')
@@ -124,8 +113,8 @@ local function MYIWKRZ_fake_script() -- CommandsFrame.DragScript
 		end
 	end)
 end
-coroutine.wrap(MYIWKRZ_fake_script)()
-local function NROEE_fake_script() -- CommandsFrame.CommandSearchScript 
+coroutine.wrap(UCSO_fake_script)()
+local function JSMJQ_fake_script() -- CommandsFrame.CommandSearchScript 
 	local script = Instance.new('LocalScript', CommandsFrame)
 
 	local search = script.Parent.CommandsSearch
@@ -151,8 +140,8 @@ local function NROEE_fake_script() -- CommandsFrame.CommandSearchScript
 	
 	search.Changed:Connect(UpdateResults)
 end
-coroutine.wrap(NROEE_fake_script)()
-local function JLNZLI_fake_script() -- Commands.WorkingClose 
+coroutine.wrap(JSMJQ_fake_script)()
+local function DCXLRL_fake_script() -- Commands.WorkingClose 
 	local script = Instance.new('LocalScript', Commands)
 
 	local poi = script.Parent.CommandsFrame
@@ -162,4 +151,4 @@ local function JLNZLI_fake_script() -- Commands.WorkingClose
 		poi.Visible = false
 	end)
 end
-coroutine.wrap(JLNZLI_fake_script)()
+coroutine.wrap(DCXLRL_fake_script)()
