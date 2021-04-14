@@ -37,13 +37,13 @@ CommandsSearch.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 CommandsSearch.BackgroundTransparency = 1.000
 CommandsSearch.BorderSizePixel = 0
 CommandsSearch.Position = UDim2.new(0.117283948, 0, 0, 0)
-CommandsSearch.Size = UDim2.new(0, 124, 0, 21)
+CommandsSearch.Size = UDim2.new(0, 124, 0, 23)
 CommandsSearch.Font = Enum.Font.Gotham
 CommandsSearch.PlaceholderColor3 = Color3.fromRGB(248, 248, 248)
-CommandsSearch.PlaceholderText = "Commands"
+CommandsSearch.PlaceholderText = "Search Commands"
 CommandsSearch.Text = ""
 CommandsSearch.TextColor3 = Color3.fromRGB(248, 248, 248)
-CommandsSearch.TextSize = 14.000
+CommandsSearch.TextSize = 13.000
 
 ExitButton.Name = "ExitButton"
 ExitButton.Parent = CommandsFrame
@@ -131,7 +131,7 @@ sit.TextSize = 14.000
 
 -- Scripts:
 
-local function LEUQBZW_fake_script() -- CommandsFrame.DragScript 
+local function RLSGMJ_fake_script() -- CommandsFrame.DragScript 
 	local script = Instance.new('LocalScript', CommandsFrame)
 
 	local UIS = game:GetService('UserInputService')
@@ -168,8 +168,8 @@ local function LEUQBZW_fake_script() -- CommandsFrame.DragScript
 		end
 	end)
 end
-coroutine.wrap(LEUQBZW_fake_script)()
-local function CFFZIV_fake_script() -- CommandsFrame.CommandSearchScript 
+coroutine.wrap(RLSGMJ_fake_script)()
+local function UURJJ_fake_script() -- CommandsFrame.CommandSearchScript 
 	local script = Instance.new('LocalScript', CommandsFrame)
 
 	local search = script.Parent.CommandsSearch
@@ -195,8 +195,8 @@ local function CFFZIV_fake_script() -- CommandsFrame.CommandSearchScript
 	
 	search.Changed:Connect(UpdateResults)
 end
-coroutine.wrap(CFFZIV_fake_script)()
-local function CLOVES_fake_script() -- Commands.WorkingClose 
+coroutine.wrap(UURJJ_fake_script)()
+local function CDXGTE_fake_script() -- Commands.WorkingClose 
 	local script = Instance.new('LocalScript', Commands)
 
 	local poi = script.Parent.CommandsFrame
@@ -206,4 +206,4 @@ local function CLOVES_fake_script() -- Commands.WorkingClose
 		poi.Visible = false
 	end)
 end
-coroutine.wrap(CLOVES_fake_script)()
+coroutine.wrap(CDXGTE_fake_script)()
