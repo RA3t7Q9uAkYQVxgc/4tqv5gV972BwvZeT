@@ -1,32 +1,46 @@
-loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/RA3t7Q9uAkYQVxgc/4tqv5gV972BwvZeT/main/Notifications'))()
-local PoisonBar = Instance.new("ScreenGui")
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local PlutoBar = Instance.new("ScreenGui")
 local CMDBar = Instance.new("Frame")
 local Input = Instance.new("TextBox")
 local arrow = Instance.new("ImageButton")
-PoisonBar.Name = "PoisonBar"
-PoisonBar.Parent = game.CoreGui 
-PoisonBar.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-PoisonBar.ResetOnSpawn = false
+local Outline = Instance.new("Frame")
+local Outline_2 = Instance.new("Frame")
+local Outline_3 = Instance.new("Frame")
+local Outline_4 = Instance.new("Frame")
+
+--Properties:
+
+PlutoBar.Name = "PlutoBar"
+PlutoBar.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+PlutoBar.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+PlutoBar.ResetOnSpawn = false
+
 CMDBar.Name = "CMDBar"
-CMDBar.Parent = PoisonBar
+CMDBar.Parent = PlutoBar
 CMDBar.AnchorPoint = Vector2.new(0.5, 1)
-CMDBar.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-CMDBar.BackgroundTransparency = 0.100
+CMDBar.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+CMDBar.BackgroundTransparency = 0.550
 CMDBar.BorderSizePixel = 0
 CMDBar.Position = UDim2.new(0.5, 0, 1, 35)
-CMDBar.Size = UDim2.new(0, 162, 0, 32)
+CMDBar.Size = UDim2.new(0, 190, 0, 33)
+
 Input.Name = "Input"
 Input.Parent = CMDBar
 Input.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Input.BackgroundTransparency = 1.000
-Input.Position = UDim2.new(0.144691378, 0, 0, 0)
-Input.Size = UDim2.new(0, 140, 0, 32)
+Input.Position = UDim2.new(0.144691333, 0, 0, 0)
+Input.Size = UDim2.new(0, 153, 0, 32)
 Input.Font = Enum.Font.Gotham
 Input.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
 Input.Text = ""
-Input.TextColor3 = Color3.fromRGB(230, 230, 230)
+Input.TextColor3 = Color3.fromRGB(248, 248, 248)
 Input.TextSize = 14.000
 Input.TextXAlignment = Enum.TextXAlignment.Left
+
 arrow.Name = "arrow"
 arrow.Parent = CMDBar
 arrow.BackgroundTransparency = 1.000
@@ -38,34 +52,42 @@ arrow.ImageColor3 = Color3.fromRGB(230, 230, 230)
 arrow.ImageRectOffset = Vector2.new(964, 284)
 arrow.ImageRectSize = Vector2.new(36, 36)
 
+Outline.Name = "Outline"
+Outline.Parent = CMDBar
+Outline.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Outline.BackgroundTransparency = 0.800
+Outline.BorderSizePixel = 0
+Outline.Position = UDim2.new(-0.0157894734, 0, 1, 0)
+Outline.Size = UDim2.new(0, 196, 0, 3)
 
+Outline_2.Name = "Outline"
+Outline_2.Parent = CMDBar
+Outline_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Outline_2.BackgroundTransparency = 0.800
+Outline_2.BorderSizePixel = 0
+Outline_2.Position = UDim2.new(-0.0157894734, 0, -0.0909090936, 0)
+Outline_2.Size = UDim2.new(0, 196, 0, 3)
 
---Cmds | ADD CMDS BELOW
+Outline_3.Name = "Outline"
+Outline_3.Parent = CMDBar
+Outline_3.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Outline_3.BackgroundTransparency = 0.800
+Outline_3.BorderSizePixel = 0
+Outline_3.Position = UDim2.new(1, 0, 0, 0)
+Outline_3.Size = UDim2.new(0, 3, 0, 33)
 
---1
-Input.FocusLost:Connect(function()
-local arg = string.split(Input.Text)
-  if arg[1] == ";cmds" then
-    loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/RA3t7Q9uAkYQVxgc/4tqv5gV972BwvZeT/main/PlutoCommands'))()
-end
-end)
+Outline_4.Name = "Outline"
+Outline_4.Parent = CMDBar
+Outline_4.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Outline_4.BackgroundTransparency = 0.800
+Outline_4.BorderSizePixel = 0
+Outline_4.Position = UDim2.new(-0.0157894269, 0, 0, 0)
+Outline_4.Size = UDim2.new(0, 3, 0, 33)
 
---2
-Input.FocusLost:Connect(function()
-local arg = string.split(Input.Text)
-  if arg[1] == ";test" then
-    print("test2")
-end
-end)
+-- Scripts:
 
-
-
-
-
--- Makes Tween Work --
-
-local function PAVQL_fake_script() -- PoisonBar.tweenbar 
-	local script = Instance.new('LocalScript', PoisonBar)
+local function ABTJ_fake_script() -- PlutoBar.tweenbar 
+	local script = Instance.new('LocalScript', PlutoBar)
 
 	--[[
 	Top Bar
@@ -86,7 +108,7 @@ local function PAVQL_fake_script() -- PoisonBar.tweenbar
 	local Open = false
 	local plr = game.Players.LocalPlayer
 	
-	local PositionClosed = UDim2.new(0.5, 0,1, 35)
+	local PositionClosed = UDim2.new(0.5, 0,1, 35) --AnchorPoint 0.5, 1
 	local PositionOpen = UDim2.new(0.5, 0,1, -70)
 	
 	
@@ -104,4 +126,4 @@ local function PAVQL_fake_script() -- PoisonBar.tweenbar
 		end
 	end)
 end
-coroutine.wrap(PAVQL_fake_script)()
+coroutine.wrap(ABTJ_fake_script)()
