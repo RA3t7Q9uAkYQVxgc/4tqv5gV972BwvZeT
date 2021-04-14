@@ -78,8 +78,34 @@ Outline_4.Size = UDim2.new(0, 3, 0, 33)
 
 Input.FocusLost:Connect(function()
 local arg = string.split(Input.Text)
-  if arg[1] == ";cmds" then
-    loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/RA3t7Q9uAkYQVxgc/4tqv5gV972BwvZeT/main/PlutoCommands'))()
+  if arg[1] == ";pnoclip" then
+   nam = game.Players.LocalPlayer.Name
+
+game:GetService('RunService').Stepped:connect(function()
+for a, b in pairs(game.Workspace:GetChildren()) do
+if b.Name == nam then
+for i, v in pairs(game.Workspace[nam]:GetChildren()) do
+if v:IsA("BasePart") then
+v.CanCollide = false
+
+end
+end
+end
+end
+end)
+
+Workspace[nam].Head.Changed:connect(function()
+for a, b in pairs(game.Workspace:GetChildren()) do
+if b.Name == nam then
+for i, v in pairs(game.Workspace[nam]:GetChildren()) do
+if v:IsA("BasePart") then
+v.CanCollide = false
+
+end
+end
+end
+end
+end)
 end
 end)
 
