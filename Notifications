@@ -4,9 +4,9 @@
 -- Instances:
 
 local Notifications = Instance.new("ScreenGui")
-local GameNoti = Instance.new("Frame")
+local CreditNoti = Instance.new("Frame")
 local Notification = Instance.new("TextLabel")
-local GameText = Instance.new("TextLabel")
+local CreditText = Instance.new("TextLabel")
 local WelcomeNoti = Instance.new("Frame")
 local Notification_2 = Instance.new("TextLabel")
 local Welcometext = Instance.new("TextLabel")
@@ -23,16 +23,16 @@ Notifications.Name = "Notifications"
 Notifications.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 Notifications.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-GameNoti.Name = "GameNoti"
-GameNoti.Parent = Notifications
-GameNoti.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-GameNoti.BackgroundTransparency = 0.700
-GameNoti.BorderSizePixel = 0
-GameNoti.Position = UDim2.new(0.00467289705, 0, 0.881176591, 0)
-GameNoti.Size = UDim2.new(0, 189, 0, 51)
+CreditNoti.Name = "CreditNoti"
+CreditNoti.Parent = Notifications
+CreditNoti.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+CreditNoti.BackgroundTransparency = 0.700
+CreditNoti.BorderSizePixel = 0
+CreditNoti.Position = UDim2.new(0.00467289705, 0, 0.881176591, 0)
+CreditNoti.Size = UDim2.new(0, 189, 0, 51)
 
 Notification.Name = "Notification"
-Notification.Parent = GameNoti
+Notification.Parent = CreditNoti
 Notification.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Notification.BackgroundTransparency = 1.000
 Notification.Position = UDim2.new(0.158730149, 0, 0, 0)
@@ -43,18 +43,18 @@ Notification.TextColor3 = Color3.fromRGB(248, 248, 248)
 Notification.TextSize = 13.000
 Notification.TextWrapped = true
 
-GameText.Name = "GameText"
-GameText.Parent = GameNoti
-GameText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-GameText.BackgroundTransparency = 1.000
-GameText.Position = UDim2.new(0, 0, 0.352941185, 0)
-GameText.Size = UDim2.new(0, 189, 0, 33)
-GameText.Font = Enum.Font.Gotham
-GameText.Text = " "
-GameText.TextColor3 = Color3.fromRGB(230, 230, 230)
-GameText.TextSize = 12.000
-GameText.TextWrapped = true
-GameText.TextYAlignment = Enum.TextYAlignment.Top
+CreditText.Name = "CreditText"
+CreditText.Parent = CreditNoti
+CreditText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CreditText.BackgroundTransparency = 1.000
+CreditText.Position = UDim2.new(0, 0, 0.352941185, 0)
+CreditText.Size = UDim2.new(0, 189, 0, 33)
+CreditText.Font = Enum.Font.Gotham
+CreditText.Text = " "
+CreditText.TextColor3 = Color3.fromRGB(230, 230, 230)
+CreditText.TextSize = 12.000
+CreditText.TextWrapped = true
+CreditText.TextYAlignment = Enum.TextYAlignment.Top
 
 WelcomeNoti.Name = "WelcomeNoti"
 WelcomeNoti.Parent = Notifications
@@ -157,7 +157,7 @@ BarText.TextYAlignment = Enum.TextYAlignment.Top
 
 -- Scripts:
 
-local function OOFUUU_fake_script() -- Notification.NotiFade2 
+local function JDQY_fake_script() -- Notification.NotiFade2 
 	local script = Instance.new('Script', Notification)
 
 	wait(10)
@@ -169,15 +169,15 @@ local function OOFUUU_fake_script() -- Notification.NotiFade2
 		end
 	end
 end
-coroutine.wrap(OOFUUU_fake_script)()
-local function OXLQAV_fake_script() -- GameText.GameNameS 
-	local script = Instance.new('LocalScript', GameText)
+coroutine.wrap(JDQY_fake_script)()
+local function QLNDK_fake_script() -- CreditText.CreditNameS 
+	local script = Instance.new('LocalScript', CreditText)
 
-	script.Parent.Text = "Playing "..game.Name..""
+	script.Parent.Text = "Made By austn#1400"
 end
-coroutine.wrap(OXLQAV_fake_script)()
-local function MAZH_fake_script() -- GameText.NotiFade3 
-	local script = Instance.new('Script', GameText)
+coroutine.wrap(QLNDK_fake_script)()
+local function EMDVR_fake_script() -- CreditText.NotiFade3 
+	local script = Instance.new('Script', CreditText)
 
 	wait(10)
 	while true do
@@ -188,9 +188,9 @@ local function MAZH_fake_script() -- GameText.NotiFade3
 		end
 	end
 end
-coroutine.wrap(MAZH_fake_script)()
-local function PYNWQ_fake_script() -- GameNoti.NotiFade1 
-	local script = Instance.new('Script', GameNoti)
+coroutine.wrap(EMDVR_fake_script)()
+local function CVMKMFZ_fake_script() -- CreditNoti.NotiFade1 
+	local script = Instance.new('Script', CreditNoti)
 
 	wait(10)
 	while true do
@@ -201,8 +201,8 @@ local function PYNWQ_fake_script() -- GameNoti.NotiFade1
 		end
 	end
 end
-coroutine.wrap(PYNWQ_fake_script)()
-local function QZPP_fake_script() -- Notification_2.NotiFade2 
+coroutine.wrap(CVMKMFZ_fake_script)()
+local function HCSBBLL_fake_script() -- Notification_2.NotiFade2 
 	local script = Instance.new('Script', Notification_2)
 
 	wait(10)
@@ -214,8 +214,8 @@ local function QZPP_fake_script() -- Notification_2.NotiFade2
 		end
 	end
 end
-coroutine.wrap(QZPP_fake_script)()
-local function XHGLPLV_fake_script() -- WelcomeNoti.NotiFade1 
+coroutine.wrap(HCSBBLL_fake_script)()
+local function HPYDJJ_fake_script() -- WelcomeNoti.NotiFade1 
 	local script = Instance.new('Script', WelcomeNoti)
 
 	wait(10)
@@ -227,15 +227,15 @@ local function XHGLPLV_fake_script() -- WelcomeNoti.NotiFade1
 		end
 	end
 end
-coroutine.wrap(XHGLPLV_fake_script)()
-local function BKEALVT_fake_script() -- Welcometext.WelcomeS 
+coroutine.wrap(HPYDJJ_fake_script)()
+local function SGQVRXK_fake_script() -- Welcometext.WelcomeS 
 	local script = Instance.new('LocalScript', Welcometext)
 
 	script.Parent.Text = "Welcome, ".. game.Players.LocalPlayer.Name ..". Thanks For Loading Pluto"
 	
 end
-coroutine.wrap(BKEALVT_fake_script)()
-local function XGLJJGY_fake_script() -- Welcometext.NotiFade3 
+coroutine.wrap(SGQVRXK_fake_script)()
+local function XVNA_fake_script() -- Welcometext.NotiFade3 
 	local script = Instance.new('Script', Welcometext)
 
 	wait(10)
@@ -247,8 +247,8 @@ local function XGLJJGY_fake_script() -- Welcometext.NotiFade3
 		end
 	end
 end
-coroutine.wrap(XGLJJGY_fake_script)()
-local function ZMUWCF_fake_script() -- Notification_3.NotiFade2 
+coroutine.wrap(XVNA_fake_script)()
+local function OGMQITZ_fake_script() -- Notification_3.NotiFade2 
 	local script = Instance.new('Script', Notification_3)
 
 	wait(10)
@@ -260,14 +260,14 @@ local function ZMUWCF_fake_script() -- Notification_3.NotiFade2
 		end
 	end
 end
-coroutine.wrap(ZMUWCF_fake_script)()
-local function PHASPU_fake_script() -- PrefixText.PrefixS 
+coroutine.wrap(OGMQITZ_fake_script)()
+local function RJGZOO_fake_script() -- PrefixText.PrefixS 
 	local script = Instance.new('LocalScript', PrefixText)
 
 	script.Parent.Text = "Command Bar Prefix ;"
 end
-coroutine.wrap(PHASPU_fake_script)()
-local function SKWUZJJ_fake_script() -- PrefixText.NotiFade3 
+coroutine.wrap(RJGZOO_fake_script)()
+local function QDMWD_fake_script() -- PrefixText.NotiFade3 
 	local script = Instance.new('Script', PrefixText)
 
 	wait(10)
@@ -279,8 +279,8 @@ local function SKWUZJJ_fake_script() -- PrefixText.NotiFade3
 		end
 	end
 end
-coroutine.wrap(SKWUZJJ_fake_script)()
-local function CEEGCRJ_fake_script() -- PrefixNoti.NotiFade1 
+coroutine.wrap(QDMWD_fake_script)()
+local function VNKF_fake_script() -- PrefixNoti.NotiFade1 
 	local script = Instance.new('Script', PrefixNoti)
 
 	wait(10)
@@ -292,8 +292,8 @@ local function CEEGCRJ_fake_script() -- PrefixNoti.NotiFade1
 		end
 	end
 end
-coroutine.wrap(CEEGCRJ_fake_script)()
-local function DDOUJFT_fake_script() -- Notification_4.NotiFade2 
+coroutine.wrap(VNKF_fake_script)()
+local function BQMKNJ_fake_script() -- Notification_4.NotiFade2 
 	local script = Instance.new('Script', Notification_4)
 
 	wait(10)
@@ -305,14 +305,14 @@ local function DDOUJFT_fake_script() -- Notification_4.NotiFade2
 		end
 	end
 end
-coroutine.wrap(DDOUJFT_fake_script)()
-local function OLKCA_fake_script() -- BarText.BarS 
+coroutine.wrap(BQMKNJ_fake_script)()
+local function CERM_fake_script() -- BarText.BarS 
 	local script = Instance.new('LocalScript', BarText)
 
 	script.Parent.Text = "Command Bar Successfuly Loaded."
 end
-coroutine.wrap(OLKCA_fake_script)()
-local function CXBZFVD_fake_script() -- BarText.NotiFade3 
+coroutine.wrap(CERM_fake_script)()
+local function LMSXSKZ_fake_script() -- BarText.NotiFade3 
 	local script = Instance.new('Script', BarText)
 
 	wait(10)
@@ -324,8 +324,8 @@ local function CXBZFVD_fake_script() -- BarText.NotiFade3
 		end
 	end
 end
-coroutine.wrap(CXBZFVD_fake_script)()
-local function KBIZLQU_fake_script() -- BarLoaded.NotiFade1 
+coroutine.wrap(LMSXSKZ_fake_script)()
+local function REONDC_fake_script() -- BarLoaded.NotiFade1 
 	local script = Instance.new('Script', BarLoaded)
 
 	wait(10)
@@ -337,4 +337,4 @@ local function KBIZLQU_fake_script() -- BarLoaded.NotiFade1
 		end
 	end
 end
-coroutine.wrap(KBIZLQU_fake_script)()
+coroutine.wrap(REONDC_fake_script)()
