@@ -14,6 +14,7 @@ local rejoin = Instance.new("TextLabel")
 local serverhop = Instance.new("TextLabel")
 local equipall = Instance.new("TextLabel")
 local demesh = Instance.new("TextLabel")
+local sit = Instance.new("TextLabel")
 
 --Properties:
 
@@ -118,9 +119,19 @@ demesh.Text = "demesh"
 demesh.TextColor3 = Color3.fromRGB(240, 240, 240)
 demesh.TextSize = 14.000
 
+sit.Name = "sit"
+sit.Parent = Items
+sit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+sit.BackgroundTransparency = 1.000
+sit.Size = UDim2.new(0, 154, 0, 21)
+sit.Font = Enum.Font.Gotham
+sit.Text = "sit"
+sit.TextColor3 = Color3.fromRGB(240, 240, 240)
+sit.TextSize = 14.000
+
 -- Scripts:
 
-local function NNNS_fake_script() -- CommandsFrame.DragScript 
+local function LEUQBZW_fake_script() -- CommandsFrame.DragScript 
 	local script = Instance.new('LocalScript', CommandsFrame)
 
 	local UIS = game:GetService('UserInputService')
@@ -157,8 +168,8 @@ local function NNNS_fake_script() -- CommandsFrame.DragScript
 		end
 	end)
 end
-coroutine.wrap(NNNS_fake_script)()
-local function FDWOBL_fake_script() -- CommandsFrame.CommandSearchScript 
+coroutine.wrap(LEUQBZW_fake_script)()
+local function CFFZIV_fake_script() -- CommandsFrame.CommandSearchScript 
 	local script = Instance.new('LocalScript', CommandsFrame)
 
 	local search = script.Parent.CommandsSearch
@@ -184,8 +195,8 @@ local function FDWOBL_fake_script() -- CommandsFrame.CommandSearchScript
 	
 	search.Changed:Connect(UpdateResults)
 end
-coroutine.wrap(FDWOBL_fake_script)()
-local function PXCXKQB_fake_script() -- Commands.WorkingClose 
+coroutine.wrap(CFFZIV_fake_script)()
+local function CLOVES_fake_script() -- Commands.WorkingClose 
 	local script = Instance.new('LocalScript', Commands)
 
 	local poi = script.Parent.CommandsFrame
@@ -195,4 +206,4 @@ local function PXCXKQB_fake_script() -- Commands.WorkingClose
 		poi.Visible = false
 	end)
 end
-coroutine.wrap(PXCXKQB_fake_script)()
+coroutine.wrap(CLOVES_fake_script)()
