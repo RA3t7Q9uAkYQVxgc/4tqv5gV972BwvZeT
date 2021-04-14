@@ -7,19 +7,15 @@ local Notifications = Instance.new("ScreenGui")
 local GameNoti = Instance.new("Frame")
 local Notification = Instance.new("TextLabel")
 local GameText = Instance.new("TextLabel")
-local notiimage = Instance.new("ImageButton")
 local WelcomeNoti = Instance.new("Frame")
 local Notification_2 = Instance.new("TextLabel")
 local Welcometext = Instance.new("TextLabel")
-local notiimage_2 = Instance.new("ImageButton")
 local PrefixNoti = Instance.new("Frame")
 local Notification_3 = Instance.new("TextLabel")
 local PrefixText = Instance.new("TextLabel")
-local notiimage_3 = Instance.new("ImageButton")
 local BarLoaded = Instance.new("Frame")
 local Notification_4 = Instance.new("TextLabel")
 local BarText = Instance.new("TextLabel")
-local notiimage_4 = Instance.new("ImageButton")
 
 --Properties:
 
@@ -29,8 +25,8 @@ Notifications.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 GameNoti.Name = "GameNoti"
 GameNoti.Parent = Notifications
-GameNoti.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-GameNoti.BackgroundTransparency = 0.100
+GameNoti.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+GameNoti.BackgroundTransparency = 0.700
 GameNoti.BorderSizePixel = 0
 GameNoti.Position = UDim2.new(0.00467289705, 0, 0.881176591, 0)
 GameNoti.Size = UDim2.new(0, 189, 0, 51)
@@ -43,7 +39,7 @@ Notification.Position = UDim2.new(0.158730149, 0, 0, 0)
 Notification.Size = UDim2.new(0, 128, 0, 15)
 Notification.Font = Enum.Font.Gotham
 Notification.Text = "Notification"
-Notification.TextColor3 = Color3.fromRGB(230, 230, 230)
+Notification.TextColor3 = Color3.fromRGB(248, 248, 248)
 Notification.TextSize = 13.000
 Notification.TextWrapped = true
 
@@ -56,26 +52,14 @@ GameText.Size = UDim2.new(0, 189, 0, 33)
 GameText.Font = Enum.Font.Gotham
 GameText.Text = " "
 GameText.TextColor3 = Color3.fromRGB(230, 230, 230)
-GameText.TextSize = 11.000
+GameText.TextSize = 12.000
 GameText.TextWrapped = true
 GameText.TextYAlignment = Enum.TextYAlignment.Top
 
-notiimage.Name = "notiimage"
-notiimage.Parent = GameNoti
-notiimage.BackgroundTransparency = 1.000
-notiimage.LayoutOrder = 9
-notiimage.Position = UDim2.new(0.0292736106, 0, 0.0144893527, 0)
-notiimage.Size = UDim2.new(0, 15, 0, 13)
-notiimage.ZIndex = 2
-notiimage.Image = "rbxassetid://3926307971"
-notiimage.ImageColor3 = Color3.fromRGB(230, 230, 230)
-notiimage.ImageRectOffset = Vector2.new(444, 4)
-notiimage.ImageRectSize = Vector2.new(36, 36)
-
 WelcomeNoti.Name = "WelcomeNoti"
 WelcomeNoti.Parent = Notifications
-WelcomeNoti.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-WelcomeNoti.BackgroundTransparency = 0.100
+WelcomeNoti.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+WelcomeNoti.BackgroundTransparency = 0.700
 WelcomeNoti.BorderSizePixel = 0
 WelcomeNoti.Position = UDim2.new(0.00467289705, 0, 0.931726933, 0)
 WelcomeNoti.Size = UDim2.new(0, 189, 0, 51)
@@ -105,22 +89,10 @@ Welcometext.TextSize = 10.000
 Welcometext.TextWrapped = true
 Welcometext.TextYAlignment = Enum.TextYAlignment.Top
 
-notiimage_2.Name = "notiimage"
-notiimage_2.Parent = WelcomeNoti
-notiimage_2.BackgroundTransparency = 1.000
-notiimage_2.LayoutOrder = 9
-notiimage_2.Position = UDim2.new(0.0292736106, 0, 0.0177179575, 0)
-notiimage_2.Size = UDim2.new(0, 15, 0, 13)
-notiimage_2.ZIndex = 2
-notiimage_2.Image = "rbxassetid://3926307971"
-notiimage_2.ImageColor3 = Color3.fromRGB(230, 230, 230)
-notiimage_2.ImageRectOffset = Vector2.new(444, 4)
-notiimage_2.ImageRectSize = Vector2.new(36, 36)
-
 PrefixNoti.Name = "PrefixNoti"
 PrefixNoti.Parent = Notifications
-PrefixNoti.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-PrefixNoti.BackgroundTransparency = 0.100
+PrefixNoti.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+PrefixNoti.BackgroundTransparency = 0.700
 PrefixNoti.BorderSizePixel = 0
 PrefixNoti.Position = UDim2.new(0.00467288494, 0, 0.829986632, 0)
 PrefixNoti.Size = UDim2.new(0, 189, 0, 51)
@@ -133,7 +105,7 @@ Notification_3.Position = UDim2.new(0.158730149, 0, 0, 0)
 Notification_3.Size = UDim2.new(0, 128, 0, 15)
 Notification_3.Font = Enum.Font.Gotham
 Notification_3.Text = "Notification"
-Notification_3.TextColor3 = Color3.fromRGB(230, 230, 230)
+Notification_3.TextColor3 = Color3.fromRGB(248, 248, 248)
 Notification_3.TextSize = 13.000
 Notification_3.TextWrapped = true
 
@@ -150,22 +122,10 @@ PrefixText.TextSize = 12.000
 PrefixText.TextWrapped = true
 PrefixText.TextYAlignment = Enum.TextYAlignment.Top
 
-notiimage_3.Name = "notiimage"
-notiimage_3.Parent = PrefixNoti
-notiimage_3.BackgroundTransparency = 1.000
-notiimage_3.LayoutOrder = 9
-notiimage_3.Position = UDim2.new(0.0292736106, 0, 0.00992202759, 0)
-notiimage_3.Size = UDim2.new(0, 15, 0, 13)
-notiimage_3.ZIndex = 2
-notiimage_3.Image = "rbxassetid://3926307971"
-notiimage_3.ImageColor3 = Color3.fromRGB(230, 230, 230)
-notiimage_3.ImageRectOffset = Vector2.new(444, 4)
-notiimage_3.ImageRectSize = Vector2.new(36, 36)
-
 BarLoaded.Name = "BarLoaded"
 BarLoaded.Parent = Notifications
-BarLoaded.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
-BarLoaded.BackgroundTransparency = 0.100
+BarLoaded.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+BarLoaded.BackgroundTransparency = 0.700
 BarLoaded.BorderSizePixel = 0
 BarLoaded.Position = UDim2.new(0.00467287935, 0, 0.779116392, 0)
 BarLoaded.Size = UDim2.new(0, 189, 0, 51)
@@ -178,7 +138,7 @@ Notification_4.Position = UDim2.new(0.158730149, 0, 0, 0)
 Notification_4.Size = UDim2.new(0, 128, 0, 15)
 Notification_4.Font = Enum.Font.Gotham
 Notification_4.Text = "Notification"
-Notification_4.TextColor3 = Color3.fromRGB(230, 230, 230)
+Notification_4.TextColor3 = Color3.fromRGB(248, 248, 248)
 Notification_4.TextSize = 13.000
 Notification_4.TextWrapped = true
 
@@ -195,56 +155,44 @@ BarText.TextSize = 12.000
 BarText.TextWrapped = true
 BarText.TextYAlignment = Enum.TextYAlignment.Top
 
-notiimage_4.Name = "notiimage"
-notiimage_4.Parent = BarLoaded
-notiimage_4.BackgroundTransparency = 1.000
-notiimage_4.LayoutOrder = 9
-notiimage_4.Position = UDim2.new(0.0292736106, 0, 0.00992202759, 0)
-notiimage_4.Size = UDim2.new(0, 15, 0, 13)
-notiimage_4.ZIndex = 2
-notiimage_4.Image = "rbxassetid://3926307971"
-notiimage_4.ImageColor3 = Color3.fromRGB(230, 230, 230)
-notiimage_4.ImageRectOffset = Vector2.new(444, 4)
-notiimage_4.ImageRectSize = Vector2.new(36, 36)
-
 -- Scripts:
 
-local function FNFAN_fake_script() -- Notification.NotiFade2 
+local function OOFUUU_fake_script() -- Notification.NotiFade2 
 	local script = Instance.new('Script', Notification)
 
-	wait(4)
+	wait(10)
 	while true do
 		wait(0.1)
-		script.Parent.TextTransparency = script.Parent.TextTransparency + 0.01
+		script.Parent.TextTransparency = script.Parent.TextTransparency + 0.04
 		if script.Parent.TextTransparency == 1 then
 			break
 		end
 	end
 end
-coroutine.wrap(FNFAN_fake_script)()
-local function QTAVWTU_fake_script() -- GameText.GameNameS 
+coroutine.wrap(OOFUUU_fake_script)()
+local function OXLQAV_fake_script() -- GameText.GameNameS 
 	local script = Instance.new('LocalScript', GameText)
 
-	script.Parent.Text = "Pluto Admin Made By austn#1400 aka Pluto"
+	script.Parent.Text = "Playing "..game.Name..""
 end
-coroutine.wrap(QTAVWTU_fake_script)()
-local function PAEX_fake_script() -- GameText.NotiFade3 
+coroutine.wrap(OXLQAV_fake_script)()
+local function MAZH_fake_script() -- GameText.NotiFade3 
 	local script = Instance.new('Script', GameText)
 
-	wait(4)
+	wait(10)
 	while true do
 		wait(0.1)
-		script.Parent.TextTransparency = script.Parent.TextTransparency + 0.01
+		script.Parent.TextTransparency = script.Parent.TextTransparency + 0.04
 		if script.Parent.TextTransparency == 1 then
 			break
 		end
 	end
 end
-coroutine.wrap(PAEX_fake_script)()
-local function HHEF_fake_script() -- GameNoti.NotiFade1 
+coroutine.wrap(MAZH_fake_script)()
+local function PYNWQ_fake_script() -- GameNoti.NotiFade1 
 	local script = Instance.new('Script', GameNoti)
 
-	wait(4)
+	wait(10)
 	while true do
 		wait(0.1)
 		script.Parent.BackgroundTransparency = script.Parent.BackgroundTransparency + 0.01
@@ -253,37 +201,24 @@ local function HHEF_fake_script() -- GameNoti.NotiFade1
 		end
 	end
 end
-coroutine.wrap(HHEF_fake_script)()
-local function GQTGEIQ_fake_script() -- notiimage.ImageFade 
-	local script = Instance.new('Script', notiimage)
-
-	wait(5)
-	while true do
-		wait(0.1)
-		script.Parent.ImageTransparency = script.Parent.ImageTransparency + 0.01
-		if script.Parent.ImageTransparency == 1 then
-			break
-		end
-	end
-end
-coroutine.wrap(GQTGEIQ_fake_script)()
-local function JAKTB_fake_script() -- Notification_2.NotiFade2 
+coroutine.wrap(PYNWQ_fake_script)()
+local function QZPP_fake_script() -- Notification_2.NotiFade2 
 	local script = Instance.new('Script', Notification_2)
 
-	wait(5)
+	wait(10)
 	while true do
 		wait(0.1)
-		script.Parent.TextTransparency = script.Parent.TextTransparency + 0.01
+		script.Parent.TextTransparency = script.Parent.TextTransparency + 0.04
 		if script.Parent.TextTransparency == 1 then
 			break
 		end
 	end
 end
-coroutine.wrap(JAKTB_fake_script)()
-local function MGKGQ_fake_script() -- WelcomeNoti.NotiFade1 
+coroutine.wrap(QZPP_fake_script)()
+local function XHGLPLV_fake_script() -- WelcomeNoti.NotiFade1 
 	local script = Instance.new('Script', WelcomeNoti)
 
-	wait(5)
+	wait(10)
 	while true do
 		wait(0.1)
 		script.Parent.BackgroundTransparency = script.Parent.BackgroundTransparency + 0.01
@@ -292,76 +227,63 @@ local function MGKGQ_fake_script() -- WelcomeNoti.NotiFade1
 		end
 	end
 end
-coroutine.wrap(MGKGQ_fake_script)()
-local function UBIA_fake_script() -- Welcometext.WelcomeS 
+coroutine.wrap(XHGLPLV_fake_script)()
+local function BKEALVT_fake_script() -- Welcometext.WelcomeS 
 	local script = Instance.new('LocalScript', Welcometext)
 
 	script.Parent.Text = "Welcome, ".. game.Players.LocalPlayer.Name ..". Thanks For Loading Pluto"
 	
 end
-coroutine.wrap(UBIA_fake_script)()
-local function JSANH_fake_script() -- Welcometext.NotiFade3 
+coroutine.wrap(BKEALVT_fake_script)()
+local function XGLJJGY_fake_script() -- Welcometext.NotiFade3 
 	local script = Instance.new('Script', Welcometext)
 
-	wait(5)
+	wait(10)
 	while true do
 		wait(0.1)
-		script.Parent.TextTransparency = script.Parent.TextTransparency + 0.01
+		script.Parent.TextTransparency = script.Parent.TextTransparency + 0.04
 		if script.Parent.TextTransparency == 1 then
 			break
 		end
 	end
 end
-coroutine.wrap(JSANH_fake_script)()
-local function EOBEHS_fake_script() -- notiimage_2.ImageFade 
-	local script = Instance.new('Script', notiimage_2)
-
-	wait(5)
-	while true do
-		wait(0.1)
-		script.Parent.ImageTransparency = script.Parent.ImageTransparency + 0.01
-		if script.Parent.ImageTransparency == 1 then
-			break
-		end
-	end
-end
-coroutine.wrap(EOBEHS_fake_script)()
-local function DOQOVNP_fake_script() -- Notification_3.NotiFade2 
+coroutine.wrap(XGLJJGY_fake_script)()
+local function ZMUWCF_fake_script() -- Notification_3.NotiFade2 
 	local script = Instance.new('Script', Notification_3)
 
-	wait(4)
+	wait(10)
 	while true do
 		wait(0.1)
-		script.Parent.TextTransparency = script.Parent.TextTransparency + 0.01
+		script.Parent.TextTransparency = script.Parent.TextTransparency + 0.04
 		if script.Parent.TextTransparency == 1 then
 			break
 		end
 	end
 end
-coroutine.wrap(DOQOVNP_fake_script)()
-local function PGIZA_fake_script() -- PrefixText.PrefixS 
+coroutine.wrap(ZMUWCF_fake_script)()
+local function PHASPU_fake_script() -- PrefixText.PrefixS 
 	local script = Instance.new('LocalScript', PrefixText)
 
 	script.Parent.Text = "Command Bar Prefix ;"
 end
-coroutine.wrap(PGIZA_fake_script)()
-local function UEGOLR_fake_script() -- PrefixText.NotiFade3 
+coroutine.wrap(PHASPU_fake_script)()
+local function SKWUZJJ_fake_script() -- PrefixText.NotiFade3 
 	local script = Instance.new('Script', PrefixText)
 
-	wait(4)
+	wait(10)
 	while true do
 		wait(0.1)
-		script.Parent.TextTransparency = script.Parent.TextTransparency + 0.01
+		script.Parent.TextTransparency = script.Parent.TextTransparency + 0.04
 		if script.Parent.TextTransparency == 1 then
 			break
 		end
 	end
 end
-coroutine.wrap(UEGOLR_fake_script)()
-local function UREHQEM_fake_script() -- PrefixNoti.NotiFade1 
+coroutine.wrap(SKWUZJJ_fake_script)()
+local function CEEGCRJ_fake_script() -- PrefixNoti.NotiFade1 
 	local script = Instance.new('Script', PrefixNoti)
 
-	wait(4)
+	wait(10)
 	while true do
 		wait(0.1)
 		script.Parent.BackgroundTransparency = script.Parent.BackgroundTransparency + 0.01
@@ -370,56 +292,43 @@ local function UREHQEM_fake_script() -- PrefixNoti.NotiFade1
 		end
 	end
 end
-coroutine.wrap(UREHQEM_fake_script)()
-local function VTPC_fake_script() -- notiimage_3.ImageFade 
-	local script = Instance.new('Script', notiimage_3)
-
-	wait(5)
-	while true do
-		wait(0.1)
-		script.Parent.ImageTransparency = script.Parent.ImageTransparency + 0.01
-		if script.Parent.ImageTransparency == 1 then
-			break
-		end
-	end
-end
-coroutine.wrap(VTPC_fake_script)()
-local function IOILRE_fake_script() -- Notification_4.NotiFade2 
+coroutine.wrap(CEEGCRJ_fake_script)()
+local function DDOUJFT_fake_script() -- Notification_4.NotiFade2 
 	local script = Instance.new('Script', Notification_4)
 
-	wait(4)
+	wait(10)
 	while true do
 		wait(0.1)
-		script.Parent.TextTransparency = script.Parent.TextTransparency + 0.01
+		script.Parent.TextTransparency = script.Parent.TextTransparency + 0.04
 		if script.Parent.TextTransparency == 1 then
 			break
 		end
 	end
 end
-coroutine.wrap(IOILRE_fake_script)()
-local function PWKNTR_fake_script() -- BarText.BarS 
+coroutine.wrap(DDOUJFT_fake_script)()
+local function OLKCA_fake_script() -- BarText.BarS 
 	local script = Instance.new('LocalScript', BarText)
 
 	script.Parent.Text = "Command Bar Successfuly Loaded."
 end
-coroutine.wrap(PWKNTR_fake_script)()
-local function TDDAOCE_fake_script() -- BarText.NotiFade3 
+coroutine.wrap(OLKCA_fake_script)()
+local function CXBZFVD_fake_script() -- BarText.NotiFade3 
 	local script = Instance.new('Script', BarText)
 
-	wait(4)
+	wait(10)
 	while true do
 		wait(0.1)
-		script.Parent.TextTransparency = script.Parent.TextTransparency + 0.01
+		script.Parent.TextTransparency = script.Parent.TextTransparency + 0.04
 		if script.Parent.TextTransparency == 1 then
 			break
 		end
 	end
 end
-coroutine.wrap(TDDAOCE_fake_script)()
-local function PASTTKJ_fake_script() -- BarLoaded.NotiFade1 
+coroutine.wrap(CXBZFVD_fake_script)()
+local function KBIZLQU_fake_script() -- BarLoaded.NotiFade1 
 	local script = Instance.new('Script', BarLoaded)
 
-	wait(4)
+	wait(10)
 	while true do
 		wait(0.1)
 		script.Parent.BackgroundTransparency = script.Parent.BackgroundTransparency + 0.01
@@ -428,17 +337,4 @@ local function PASTTKJ_fake_script() -- BarLoaded.NotiFade1
 		end
 	end
 end
-coroutine.wrap(PASTTKJ_fake_script)()
-local function JZWS_fake_script() -- notiimage_4.ImageFade 
-	local script = Instance.new('Script', notiimage_4)
-
-	wait(5)
-	while true do
-		wait(0.1)
-		script.Parent.ImageTransparency = script.Parent.ImageTransparency + 0.01
-		if script.Parent.ImageTransparency == 1 then
-			break
-		end
-	end
-end
-coroutine.wrap(JZWS_fake_script)()
+coroutine.wrap(KBIZLQU_fake_script)()
