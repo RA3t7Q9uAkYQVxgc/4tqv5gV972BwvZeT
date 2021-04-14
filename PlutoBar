@@ -1,8 +1,3 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local PlutoBar = Instance.new("ScreenGui")
 local CMDBar = Instance.new("Frame")
 local Input = Instance.new("TextBox")
@@ -11,14 +6,10 @@ local Outline = Instance.new("Frame")
 local Outline_2 = Instance.new("Frame")
 local Outline_3 = Instance.new("Frame")
 local Outline_4 = Instance.new("Frame")
-
---Properties:
-
 PlutoBar.Name = "PlutoBar"
 PlutoBar.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 PlutoBar.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 PlutoBar.ResetOnSpawn = false
-
 CMDBar.Name = "CMDBar"
 CMDBar.Parent = PlutoBar
 CMDBar.AnchorPoint = Vector2.new(0.5, 1)
@@ -27,7 +18,6 @@ CMDBar.BackgroundTransparency = 0.550
 CMDBar.BorderSizePixel = 0
 CMDBar.Position = UDim2.new(0.5, 0, 1, 35)
 CMDBar.Size = UDim2.new(0, 190, 0, 33)
-
 Input.Name = "Input"
 Input.Parent = CMDBar
 Input.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -40,7 +30,6 @@ Input.Text = ""
 Input.TextColor3 = Color3.fromRGB(248, 248, 248)
 Input.TextSize = 14.000
 Input.TextXAlignment = Enum.TextXAlignment.Left
-
 arrow.Name = "arrow"
 arrow.Parent = CMDBar
 arrow.BackgroundTransparency = 1.000
@@ -51,7 +40,6 @@ arrow.Image = "rbxassetid://3926305904"
 arrow.ImageColor3 = Color3.fromRGB(230, 230, 230)
 arrow.ImageRectOffset = Vector2.new(964, 284)
 arrow.ImageRectSize = Vector2.new(36, 36)
-
 Outline.Name = "Outline"
 Outline.Parent = CMDBar
 Outline.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
@@ -59,7 +47,6 @@ Outline.BackgroundTransparency = 0.800
 Outline.BorderSizePixel = 0
 Outline.Position = UDim2.new(-0.0157894734, 0, 1, 0)
 Outline.Size = UDim2.new(0, 196, 0, 3)
-
 Outline_2.Name = "Outline"
 Outline_2.Parent = CMDBar
 Outline_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
@@ -67,7 +54,6 @@ Outline_2.BackgroundTransparency = 0.800
 Outline_2.BorderSizePixel = 0
 Outline_2.Position = UDim2.new(-0.0157894734, 0, -0.0909090936, 0)
 Outline_2.Size = UDim2.new(0, 196, 0, 3)
-
 Outline_3.Name = "Outline"
 Outline_3.Parent = CMDBar
 Outline_3.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
@@ -75,7 +61,6 @@ Outline_3.BackgroundTransparency = 0.800
 Outline_3.BorderSizePixel = 0
 Outline_3.Position = UDim2.new(1, 0, 0, 0)
 Outline_3.Size = UDim2.new(0, 3, 0, 33)
-
 Outline_4.Name = "Outline"
 Outline_4.Parent = CMDBar
 Outline_4.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
@@ -84,8 +69,25 @@ Outline_4.BorderSizePixel = 0
 Outline_4.Position = UDim2.new(-0.0157894269, 0, 0, 0)
 Outline_4.Size = UDim2.new(0, 3, 0, 33)
 
--- Scripts:
+--Start Of Commands
 
+
+
+Input.FocusLost:Connect(function()
+local arg = string.split(Input.Text)
+  if arg[1] == ";test" then
+    print("test2")
+end
+end)
+
+
+
+
+
+--End Of Commands
+
+
+--Make Tween Work
 local function ABTJ_fake_script() -- PlutoBar.tweenbar 
 	local script = Instance.new('LocalScript', PlutoBar)
 
