@@ -75,7 +75,7 @@ Outline_4.Size = UDim2.new(0, 3, 0, 33)
 --Start Of Commands
 
 
-
+--permnoclip
 Input.FocusLost:Connect(function()
 local arg = string.split(Input.Text)
   if arg[1] == ";pnoclip" then
@@ -109,8 +109,31 @@ end)
 end
 end)
 
+--rmesh
+Input.FocusLost:Connect(function()
+local arg = string.split(Input.Text)
+  if arg[1] == ";demesh" then
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+        if v:IsA("Tool") then
+            for _,x in pairs(v:GetDescendants()) do
+                if x.Name == "Mesh" or x.Name == "SpecialMesh" then
+                    x:Destroy()
+                end
+            end
+        end
+end
+  end
+end)
 
-
+--equipall
+Input.FocusLost:Connect(function()
+local arg = string.split(Input.Text)
+  if arg[1] == ";equipall" then
+for i,v in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+   v.Parent = game:GetService("Players").LocalPlayer.Character
+end
+end
+end)
 
 
 --End Of Commands
