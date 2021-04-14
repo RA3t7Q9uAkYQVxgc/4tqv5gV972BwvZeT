@@ -8,8 +8,12 @@ local CommandsFrame = Instance.new("Frame")
 local CommandsSearch = Instance.new("TextBox")
 local ExitButton = Instance.new("ImageButton")
 local Items = Instance.new("ScrollingFrame")
-local cmds = Instance.new("TextLabel")
+local pnoclip = Instance.new("TextLabel")
 local UIListLayout = Instance.new("UIListLayout")
+local rejoin = Instance.new("TextLabel")
+local serverhop = Instance.new("TextLabel")
+local equipall = Instance.new("TextLabel")
+local demesh = Instance.new("TextLabel")
 
 --Properties:
 
@@ -61,22 +65,62 @@ Items.Position = UDim2.new(0.0246913433, 0, 0.134078026, 0)
 Items.Size = UDim2.new(0, 154, 0, 149)
 Items.ScrollBarThickness = 3
 
-cmds.Name = "cmds"
-cmds.Parent = Items
-cmds.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-cmds.BackgroundTransparency = 1.000
-cmds.Size = UDim2.new(0, 154, 0, 21)
-cmds.Font = Enum.Font.Gotham
-cmds.Text = "cmds"
-cmds.TextColor3 = Color3.fromRGB(240, 240, 240)
-cmds.TextSize = 14.000
+pnoclip.Name = "pnoclip"
+pnoclip.Parent = Items
+pnoclip.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+pnoclip.BackgroundTransparency = 1.000
+pnoclip.Size = UDim2.new(0, 154, 0, 21)
+pnoclip.Font = Enum.Font.Gotham
+pnoclip.Text = "pnoclip"
+pnoclip.TextColor3 = Color3.fromRGB(240, 240, 240)
+pnoclip.TextSize = 14.000
 
 UIListLayout.Parent = Items
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 
+rejoin.Name = "rejoin"
+rejoin.Parent = Items
+rejoin.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+rejoin.BackgroundTransparency = 1.000
+rejoin.Size = UDim2.new(0, 154, 0, 21)
+rejoin.Font = Enum.Font.Gotham
+rejoin.Text = "rejoin"
+rejoin.TextColor3 = Color3.fromRGB(240, 240, 240)
+rejoin.TextSize = 14.000
+
+serverhop.Name = "serverhop"
+serverhop.Parent = Items
+serverhop.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+serverhop.BackgroundTransparency = 1.000
+serverhop.Size = UDim2.new(0, 154, 0, 21)
+serverhop.Font = Enum.Font.Gotham
+serverhop.Text = "serverhop"
+serverhop.TextColor3 = Color3.fromRGB(240, 240, 240)
+serverhop.TextSize = 14.000
+
+equipall.Name = "equipall"
+equipall.Parent = Items
+equipall.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+equipall.BackgroundTransparency = 1.000
+equipall.Size = UDim2.new(0, 154, 0, 21)
+equipall.Font = Enum.Font.Gotham
+equipall.Text = "equipall"
+equipall.TextColor3 = Color3.fromRGB(240, 240, 240)
+equipall.TextSize = 14.000
+
+demesh.Name = "demesh"
+demesh.Parent = Items
+demesh.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+demesh.BackgroundTransparency = 1.000
+demesh.Size = UDim2.new(0, 154, 0, 21)
+demesh.Font = Enum.Font.Gotham
+demesh.Text = "demesh"
+demesh.TextColor3 = Color3.fromRGB(240, 240, 240)
+demesh.TextSize = 14.000
+
 -- Scripts:
 
-local function UCSO_fake_script() -- CommandsFrame.DragScript 
+local function NNNS_fake_script() -- CommandsFrame.DragScript 
 	local script = Instance.new('LocalScript', CommandsFrame)
 
 	local UIS = game:GetService('UserInputService')
@@ -113,8 +157,8 @@ local function UCSO_fake_script() -- CommandsFrame.DragScript
 		end
 	end)
 end
-coroutine.wrap(UCSO_fake_script)()
-local function JSMJQ_fake_script() -- CommandsFrame.CommandSearchScript 
+coroutine.wrap(NNNS_fake_script)()
+local function FDWOBL_fake_script() -- CommandsFrame.CommandSearchScript 
 	local script = Instance.new('LocalScript', CommandsFrame)
 
 	local search = script.Parent.CommandsSearch
@@ -140,8 +184,8 @@ local function JSMJQ_fake_script() -- CommandsFrame.CommandSearchScript
 	
 	search.Changed:Connect(UpdateResults)
 end
-coroutine.wrap(JSMJQ_fake_script)()
-local function DCXLRL_fake_script() -- Commands.WorkingClose 
+coroutine.wrap(FDWOBL_fake_script)()
+local function PXCXKQB_fake_script() -- Commands.WorkingClose 
 	local script = Instance.new('LocalScript', Commands)
 
 	local poi = script.Parent.CommandsFrame
@@ -151,4 +195,4 @@ local function DCXLRL_fake_script() -- Commands.WorkingClose
 		poi.Visible = false
 	end)
 end
-coroutine.wrap(DCXLRL_fake_script)()
+coroutine.wrap(PXCXKQB_fake_script)()
