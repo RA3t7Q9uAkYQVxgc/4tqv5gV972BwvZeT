@@ -82,6 +82,13 @@ loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/RA3t7Q9uAkYQVxgc
 end
 end)
 
+--sit 
+Input.FocusLost:Connect(function()
+local arg = string.split(Input.Text)
+  if arg[1] == ";sit" then
+game.Players.LocalPlayer.Character.Humanoid.Sit = true
+end
+end)
 
 --permnoclip
 Input.FocusLost:Connect(function()
