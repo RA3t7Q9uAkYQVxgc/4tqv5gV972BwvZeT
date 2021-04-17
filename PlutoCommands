@@ -1,7 +1,4 @@
--- Gui to Lua
--- Version: 3.2
 
--- Instances:
 
 local Commands = Instance.new("ScreenGui")
 local CommandsFrame = Instance.new("Frame")
@@ -15,8 +12,9 @@ local serverhop = Instance.new("TextLabel")
 local equipall = Instance.new("TextLabel")
 local demesh = Instance.new("TextLabel")
 local sit = Instance.new("TextLabel")
+local antiafk = Instance.new("TextLabel")
 
---Properties:
+
 
 Commands.Name = "Commands"
 Commands.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -129,9 +127,19 @@ sit.Text = "sit"
 sit.TextColor3 = Color3.fromRGB(240, 240, 240)
 sit.TextSize = 14.000
 
+antiafk.Name = "antiafk"
+antiafk.Parent = Items
+antiafk.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+antiafk.BackgroundTransparency = 1.000
+antiafk.Size = UDim2.new(0, 154, 0, 21)
+antiafk.Font = Enum.Font.Gotham
+antiafk.Text = "antiafk"
+antiafk.TextColor3 = Color3.fromRGB(240, 240, 240)
+antiafk.TextSize = 14.000
+
 -- Scripts:
 
-local function RLSGMJ_fake_script() -- CommandsFrame.DragScript 
+local function PEUUF_fake_script() -- CommandsFrame.DragScript 
 	local script = Instance.new('LocalScript', CommandsFrame)
 
 	local UIS = game:GetService('UserInputService')
@@ -168,8 +176,8 @@ local function RLSGMJ_fake_script() -- CommandsFrame.DragScript
 		end
 	end)
 end
-coroutine.wrap(RLSGMJ_fake_script)()
-local function UURJJ_fake_script() -- CommandsFrame.CommandSearchScript 
+coroutine.wrap(PEUUF_fake_script)()
+local function HEKOGGU_fake_script() -- CommandsFrame.CommandSearchScript 
 	local script = Instance.new('LocalScript', CommandsFrame)
 
 	local search = script.Parent.CommandsSearch
@@ -195,8 +203,8 @@ local function UURJJ_fake_script() -- CommandsFrame.CommandSearchScript
 	
 	search.Changed:Connect(UpdateResults)
 end
-coroutine.wrap(UURJJ_fake_script)()
-local function CDXGTE_fake_script() -- Commands.WorkingClose 
+coroutine.wrap(HEKOGGU_fake_script)()
+local function TKIT_fake_script() -- Commands.WorkingClose 
 	local script = Instance.new('LocalScript', Commands)
 
 	local poi = script.Parent.CommandsFrame
@@ -206,4 +214,4 @@ local function CDXGTE_fake_script() -- Commands.WorkingClose
 		poi.Visible = false
 	end)
 end
-coroutine.wrap(CDXGTE_fake_script)()
+coroutine.wrap(TKIT_fake_script)()
