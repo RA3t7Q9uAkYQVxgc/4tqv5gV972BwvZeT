@@ -78,7 +78,7 @@ Outline_4.Size = UDim2.new(0, 3, 0, 33)
 Input.FocusLost:Connect(function()
 local arg = string.split(Input.Text)
   if arg[1] == ";cmds" then
-loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/RA3t7Q9uAkYQVxgc/4tqv5gV972BwvZeT/main/PlutoCommands'))()
+loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/RA3t7Q9uAkYQVxgc/4tqv5gV972BwvZeT/main/PlutoCommandss'))()
 end
 end)
 
