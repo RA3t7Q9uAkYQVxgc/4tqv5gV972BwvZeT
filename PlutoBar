@@ -82,6 +82,50 @@ loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/RA3t7Q9uAkYQVxgc
 end
 end)
 
+--BottomChat
+Input.FocusLost:Connect(function()
+    local arg = string.split(Input.Text)
+      if arg[1] == ";bottomchat" then
+bc = BrickColor.new(2,2,2)
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
+	Text = "Pluto Bottom Chat ";
+	Font = Enum.Font.Cartoon;
+	Color = bc.Color;
+	FontSize = Enum.FontSize.Size96;	
+})
+bc = BrickColor.new(255,0,0)
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
+	Text = "Can't Be Reverted";
+	Font = Enum.Font.Cartoon;
+	Color = bc.Color;
+	FontSize = Enum.FontSize.Size96;	
+})
+bc = BrickColor.new(0,128,0)
+game.StarterGui:SetCore("ChatMakeSystemMessage", {
+	Text = "To Revert You Must Rejoin";
+	Font = Enum.Font.Cartoon;
+	Color = bc.Color;
+	FontSize = Enum.FontSize.Size96;	
+})
+
+local StarterGui = game:GetService("StarterGui")
+
+repeat wait() until StarterGui:GetCore("ChatWindowSize") ~= nil
+
+local chatWindowSize = StarterGui:GetCore("ChatWindowSize")
+
+
+StarterGui:SetCore("ChatWindowPosition", UDim2.new((1 - chatWindowSize.X.Scale), 0, 0, 0))
+
+StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false)
+
+
+StarterGui:SetCore("ChatWindowPosition", UDim2.new((1 - chatWindowSize.X.Scale), 0, (1 - chatWindowSize.Y.Scale), 0))
+
+StarterGui:SetCore("ChatWindowPosition", UDim2.new(0, 0, (1 - chatWindowSize.Y.Scale), 0))
+end
+end)
+
 --sit 
 Input.FocusLost:Connect(function()
 local arg = string.split(Input.Text)
