@@ -1,0 +1,72 @@
+
+
+local ScreenGui = Instance.new("ScreenGui")
+local StatusNOTI = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+
+
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+StatusNOTI.Name = "StatusNOTI"
+StatusNOTI.Parent = ScreenGui
+StatusNOTI.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+StatusNOTI.BackgroundTransparency = 0.450
+StatusNOTI.BorderSizePixel = 0
+StatusNOTI.Position = UDim2.new(1, 0, 0.920000017, 0)
+StatusNOTI.Size = UDim2.new(0, 171, 0, 54)
+
+TextLabel.Parent = StatusNOTI
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BackgroundTransparency = 0.900
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 171, 0, 17)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = ""
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
+
+TextLabel_2.Parent = TextLabel
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.274853796, 0, 0, 0)
+TextLabel_2.Size = UDim2.new(0, 76, 0, 17)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Synapse X - Status"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 13.000
+
+ImageLabel.Parent = TextLabel
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Size = UDim2.new(0, 20, 0, 17)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=6905192282"
+
+TextLabel_3.Parent = StatusNOTI
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0, 0, 0.279000014, 0)
+TextLabel_3.Size = UDim2.new(0, 171, 0, 38)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Injected Successfully"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 14.000
+
+
+
+local function GZGPT_fake_script() -- StatusNOTI.Tweenscript 
+	local script = Instance.new('LocalScript', StatusNOTI)
+
+	repeat wait() until game:IsLoaded()
+	
+	script.Parent:TweenPosition(UDim2.new(0.891, 0,0.92, 0), "Out", "Sine",0.8)
+	
+		wait(10)
+	
+	script.Parent:TweenPosition(UDim2.new(1, 0,0.92, 0), "Out", "Sine",0.8)
+end
+coroutine.wrap(GZGPT_fake_script)()
