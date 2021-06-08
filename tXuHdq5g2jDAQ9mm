@@ -1,10 +1,7 @@
+
+
+
 print[[
-
-
-
-
-
-print-[[
 
 
 
@@ -15,6 +12,7 @@ print-[[
                   ███████║██║     ██║  ██║╚██████╗███████╗
                   ╚══════╝╚═╝     ╚═╝  ╚═╝ ╚═════╝╚══════╝
 ]]
+print[[
                              Space Version: Beta 2.4        
                               
                               
@@ -48,6 +46,12 @@ game.StarterGui:SetCore("ChatMakeSystemMessage", {
 game.Players.LocalPlayer.Chatted:connect(function(cmd) 
     if cmd:match(_G.prefix.."cmds") then
         loadstring(game:HttpGet(("https://raw.githubusercontent.com/RA3t7Q9uAkYQVxgc/4tqv5gV972BwvZeT/main/PoisonCommandsGui"), true))()
+    end
+end)
+
+game.Players.LocalPlayer.Chatted:connect(function(cmd) 
+    if cmd:match(_G.prefix.."fps") then
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/RA3t7Q9uAkYQVxgc/4tqv5gV972BwvZeT/main/FPS%20Counter"), true))()
     end
 end)
 
