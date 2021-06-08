@@ -1,5 +1,5 @@
 -- Gui to Lua
-
+print("fps loaded")
 
 -- Version: 3.2
 
