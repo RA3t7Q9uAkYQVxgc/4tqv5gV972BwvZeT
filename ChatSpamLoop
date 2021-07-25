@@ -1,0 +1,5 @@
+_G.msgspam = true
+while _G.msgspam do
+    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(_G.msg.."","All")
+    wait()
+    end
