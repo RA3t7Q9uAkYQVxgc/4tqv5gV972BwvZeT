@@ -1,3 +1,6 @@
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+    end
 print("Spin Power: ".._G.spinpow)
 print("Message: '".._G.msg.."'")
 print("Teleport Wait: ".._G.tpwait)
