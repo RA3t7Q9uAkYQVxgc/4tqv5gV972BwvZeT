@@ -1,0 +1,139 @@
+if not _G.thingtosay then
+    _G.thingtosay = "gg/slopegang | rbxbot.lua"
+end
+if not _G.shoption then
+    _G.shoption = "largest" --from cmdx
+end
+wait(5)
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
+
+local lp = game.Players.LocalPlayer
+repeat wait() until lp and lp.Character and lp.Character:FindFirstChild("HumanoidRootPart")
+local rservice = game:GetService("RunService")
+
+for _, child in pairs(lp.Character:FindFirstChild("HumanoidRootPart"):GetDescendants()) do
+    if child:IsA("BasePart") then
+        child.CustomPhysicalProperties = PhysicalProperties.new(1, 1, 1, 1, 1)
+    end
+end
+
+local bambam = Instance.new("BodyAngularVelocity",lp.Character:FindFirstChild("HumanoidRootPart"))
+bambam.AngularVelocity = Vector3.new(0,0,0)
+bambam.MaxTorque = Vector3.new(0,9e9,0)
+bambam.P = math.huge
+
+lp.CharacterAdded:Connect(function(model)
+    repeat wait() until model and model:FindFirstChildOfClass("Humanoid")
+    if model:FindFirstChild("HumanoidRootPart") then
+        for _, child in pairs(model:GetDescendants()) do
+            if child:IsA("BasePart") then
+                child.CustomPhysicalProperties = PhysicalProperties.new(1, 1, 1, 1, 1)
+            end
+        end
+        local bambam = Instance.new("BodyAngularVelocity",model.HumanoidRootPart)
+        bambam.AngularVelocity = Vector3.new(0,0,0)
+        bambam.MaxTorque = Vector3.new(0,9e9,0)
+        bambam.P = math.huge
+    end
+end)
+rservice.Stepped:Connect(function()
+    if lp.Character and lp.Character:FindFirstChildOfClass("Humanoid") then
+        if lp.Character:FindFirstChildOfClass("Humanoid").Sit == true then
+            lp.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
+        end
+        for _,z in next, lp.Character:GetChildren() do
+            if z:IsA'Part' or z:IsA'MeshPart' then
+                z.CanCollide = false
+            end
+        end
+        if lp.Character:FindFirstChildOfClass("Humanoid").FloorMaterial == Enum.Material.Air then
+            if lp.Character:FindFirstChild("HumanoidRootPart") then
+                if lp.Character.HumanoidRootPart:FindFirstChildOfClass("BodyAngularVelocity") then
+                    lp.Character.HumanoidRootPart:FindFirstChildOfClass("BodyAngularVelocity").AngularVelocity = Vector3.new(0,0,0)
+                end
+                for _,z in next, lp.Character:GetChildren() do
+                    if z:IsA'MeshPart' or z:IsA'Part' then
+                        z.Velocity = Vector3.new(0,0,0)
+                    end
+                end
+            end
+        end
+        for _, z in next, game:GetDescendants() do
+            if z:IsA "Seat" then
+                z.Disabled = true
+            end
+        end
+    end
+end)
+spawn(function()
+    while wait(1) do
+        pcall(function()
+            for _,z in pairs(game.Players:GetPlayers()) do
+                if z ~= lp then
+                    if lp.Character and lp.Character:FindFirstChild("HumanoidRootPart") and z and z.Character and z.Character:FindFirstChild("Head") and z.Character:FindFirstChildOfClass("Humanoid").FloorMaterial ~= Enum.Material.Air then
+                        lp.Character.HumanoidRootPart.CFrame = z.Character.HumanoidRootPart.CFrame
+                        if lp.Character.HumanoidRootPart:FindFirstChildOfClass("BodyAngularVelocity") then
+                            lp.Character.HumanoidRootPart:FindFirstChildOfClass("BodyAngularVelocity").AngularVelocity = Vector3.new(0,333333,0)
+                        end
+                        lp.Character.HumanoidRootPart.CFrame = z.Character.HumanoidRootPart.CFrame
+                        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("/w " .. z.Name .. " " .. _G.thingtosay,"All")
+                        wait(1.65)
+                        if lp.Character:FindFirstChild("HumanoidRootPart") then
+                            if lp.Character.HumanoidRootPart:FindFirstChildOfClass("BodyAngularVelocity") then
+                                lp.Character.HumanoidRootPart:FindFirstChildOfClass("BodyAngularVelocity").AngularVelocity = Vector3.new(0,0,0)
+                            end
+                        end
+                        wait(0.65)
+                    else
+                        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("/w " .. z.Name .. " " .. _G.thingtosay,"All")
+                    end
+                end
+            end
+        end)
+    end
+end)
+
+wait(30)
+local GUIDs = {}
+local maxPlayers = 0
+local pagesToSearch = 100
+local Http =
+    game:GetService("HttpService"):JSONDecode(
+    game:HttpGet(
+        "https://games.roblox.com/v1/games/" ..
+            game.PlaceId .. "/servers/Public?sortOrder=Asc&limit=100&cursor="
+    )
+)
+for i = 1, pagesToSearch do
+    for i, v in next, Http.data do
+        if v.playing ~= v.maxPlayers and v.id ~= game.JobId then
+            maxPlayers = v.maxPlayers
+            table.insert(GUIDs, {id = v.id, users = v.playing})
+        end
+    end
+    if Http.nextPageCursor ~= null then
+        Http =
+            game:GetService("HttpService"):JSONDecode(
+            game:HttpGet(
+                "https://games.roblox.com/v1/games/"
+                ..
+                game.PlaceId
+                ..
+                "/servers/Public?sortOrder=Asc&limit=100&cursor="
+                ..
+                Http.nextPageCursor
+            )
+        )
+    else
+        break
+    end
+end
+if _G.shoption == "fastest" then
+    game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, GUIDs[math.random(1,#GUIDs)].id, lp)
+elseif _G.shoption == "smallest" then
+    game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, GUIDs[#GUIDs].id, lp)
+elseif _G.shoption == "largest" then
+    game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, GUIDs[2].id, lp)
+end
