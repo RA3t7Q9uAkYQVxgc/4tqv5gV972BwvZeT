@@ -136,4 +136,4 @@ elseif _G.enkiserverhop == "smallest" then
 elseif _G.enkiserverhop == "largest" then
     game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, GUIDs[2].id, lp)
 end
-warn('reached end of bot script')
+warn('reached end of bot script!')
