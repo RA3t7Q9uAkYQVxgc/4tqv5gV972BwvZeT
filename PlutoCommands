@@ -1,5 +1,5 @@
 --retard fuck you
-
+print("discontinued")
 local Commands = Instance.new("ScreenGui")
 local CommandsFrame = Instance.new("Frame")
 local CommandsSearch = Instance.new("TextBox")
