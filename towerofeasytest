@@ -1,6 +1,0 @@
-local play = game:GetService("Players").LocalPlayer
-game.Workspace.WinPart.CFrame = CFrame.new(20.3812599, 3.87500596, 30.8989143, -0.988153934, -3.46391182e-08, 0.153465912, -2.99083958e-08, 1, 3.31345298e-08, -0.153465912, 2.81520975e-08, -0.988153934)
-while true do
-	play.Character.Humanoid.Health = i
-	wait(0.5)
-end
