@@ -1,6 +1,6 @@
---GetService
+-- GetService
 local GetService = game.GetService
---Services
+-- Services
 local Services = {
     Workspace = GetService(game, "Workspace");
     UserInputService = GetService(game, "UserInputService");
@@ -23,7 +23,7 @@ local Services = {
     Players = GetService(game, "Players");
 }
 
---Locals
+-- Locals
 local LocalPlayer = game:GetService("Players").LocalPlayer
 local Connection = game.Loaded
 local CWait = Connection.Wait
@@ -36,10 +36,7 @@ local Camera = Services.Workspace.CurrentCamera
 local __H = InstanceNew("Humanoid");
 local UnequipTools = __H.UnequipTools
 
-
---More Important Locals
---thanks to fate for some locals
-
+-- Important
 local filter = function(tbl, ret)
     if (type(tbl) == 'table') then
         local new = {}
@@ -204,22 +201,26 @@ local FindFirstChild, FindFirstChildOfClass, FindFirstChildWhichIsA, WaitForChil
     game.FindFirstChildWhichIsA,
     game.WaitForChild
 
+-- GetCharacter();
 local GetCharacter = GetCharacter or function(Plr)
     return Plr and Plr.Character or LocalPlayer.Character
 end
 
+-- GetRoot();
 local GetRoot = function(Plr, Char)
     local LCharacter = GetCharacter();
     local Character = Char or GetCharacter(Plr);
     return Plr and Character and (FindFirstChild(Character, "HumanoidRootPart") or FindFirstChild(Character, "Torso") or FindFirstChild(Character, "UpperTorso")) or LCharacter and (FindFirstChild(LCharacter, "HumanoidRootPart") or FindFirstChild(LCharacter, "Torso") or FindFirstChild(LCharacter, "UpperTorso"));
 end
 
+-- GetHumanoid();
     local GetHumanoid = function(Plr, Char)
         local LCharacter = GetCharacter();
         local Character = Char or GetCharacter(Plr);
         return Plr and Character and FindFirstChildWhichIsA(Character, "Humanoid") or LCharacter and FindFirstChildWhichIsA(LCharacter, "Humanoid");
     end
 
+-- ReplaceHumanoid();
     local ReplaceHumanoid = function(Hum, R)
         local Humanoid = Hum or GetHumanoid();
         local NewHumanoid = Clone(Humanoid);
@@ -234,6 +235,7 @@ end
         return NewHumanoid
     end
     
+-- ReplaceCharacter();
     local ReplaceCharacter = function()
         local Char = LocalPlayer.Character
         local Model = InstanceNew("Model");
@@ -242,3 +244,6 @@ end
         Destroy(Model);
         return Char
     end
+
+-- Synapse Internal UI Print
+printconsole('[ FatesFunc.lua ] Loaded', 57, 255, 3)
